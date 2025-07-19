@@ -35,6 +35,18 @@
   --cool-blue-700: hsl(221, 83%, 53%);
   --cool-blue-800: hsl(224, 76%, 48%);
   --cool-blue-900: hsl(224, 64%, 33%);
+
+  /* Light red accents */
+  --light-red-50: hsl(0, 100%, 97%);
+  --light-red-100: hsl(0, 93%, 94%);
+  --light-red-200: hsl(0, 96%, 89%);
+  --light-red-300: hsl(0, 94%, 82%);
+  --light-red-400: hsl(0, 91%, 71%);
+  --light-red-500: hsl(0, 84%, 60%);
+  --light-red-600: hsl(0, 72%, 51%);
+  --light-red-700: hsl(0, 74%, 42%);
+  --light-red-800: hsl(0, 70%, 35%);
+  --light-red-900: hsl(0, 63%, 31%);
 }
 
 .dark {
@@ -111,12 +123,46 @@
   .border-cool-blue-700 { border-color: var(--cool-blue-700); }
   .border-cool-blue-800 { border-color: var(--cool-blue-800); }
   .border-cool-blue-900 { border-color: var(--cool-blue-900); }
+
+  /* Light Red Utilities */
+  .text-light-red-50 { color: var(--light-red-50); }
+  .text-light-red-100 { color: var(--light-red-100); }
+  .text-light-red-200 { color: var(--light-red-200); }
+  .text-light-red-300 { color: var(--light-red-300); }
+  .text-light-red-400 { color: var(--light-red-400); }
+  .text-light-red-500 { color: var(--light-red-500); }
+  .text-light-red-600 { color: var(--light-red-600); }
+  .text-light-red-700 { color: var(--light-red-700); }
+  .text-light-red-800 { color: var(--light-red-800); }
+  .text-light-red-900 { color: var(--light-red-900); }
+
+  .bg-light-red-50 { background-color: var(--light-red-50); }
+  .bg-light-red-100 { background-color: var(--light-red-100); }
+  .bg-light-red-200 { background-color: var(--light-red-200); }
+  .bg-light-red-300 { background-color: var(--light-red-300); }
+  .bg-light-red-400 { background-color: var(--light-red-400); }
+  .bg-light-red-500 { background-color: var(--light-red-500); }
+  .bg-light-red-600 { background-color: var(--light-red-600); }
+  .bg-light-red-700 { background-color: var(--light-red-700); }
+  .bg-light-red-800 { background-color: var(--light-red-800); }
+  .bg-light-red-900 { background-color: var(--light-red-900); }
+
+  .border-light-red-50 { border-color: var(--light-red-50); }
+  .border-light-red-100 { border-color: var(--light-red-100); }
+  .border-light-red-200 { border-color: var(--light-red-200); }
+  .border-light-red-300 { border-color: var(--light-red-300); }
+  .border-light-red-400 { border-color: var(--light-red-400); }
+  .border-light-red-500 { border-color: var(--light-red-500); }
+  .border-light-red-600 { border-color: var(--light-red-600); }
+  .border-light-red-700 { border-color: var(--light-red-700); }
+  .border-light-red-800 { border-color: var(--light-red-800); }
+  .border-light-red-900 { border-color: var(--light-red-900); }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
@@ -127,7 +173,7 @@
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-80px);
   }
   to {
     opacity: 1;
@@ -138,7 +184,7 @@
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(80px);
   }
   to {
     opacity: 1;
@@ -151,35 +197,191 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
 }
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
   }
   50% {
-    transform: translateY(-20px);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes slideUpBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomInRotate {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out;
+  animation: fadeInUp 1s ease-out;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.7s ease-out;
+  animation: slideInLeft 1s ease-out;
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.7s ease-out;
+  animation: slideInRight 1s ease-out;
 }
 
 .animate-bounce-gentle {
-  animation: bounceGentle 2s ease-in-out infinite;
+  animation: bounceGentle 2.5s ease-in-out infinite;
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+.animate-slide-up-bounce {
+  animation: slideUpBounce 1.2s ease-out;
+}
+
+.animate-zoom-in-rotate {
+  animation: zoomInRotate 1s ease-out;
+}
+
+.animate-typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: typewriter 3s steps(40) forwards;
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.hover-scale {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.stagger-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.stagger-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.stagger-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.stagger-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.stagger-delay-500 {
+  animation-delay: 0.5s;
 }
