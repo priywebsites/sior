@@ -16,7 +16,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden transition-all duration-1000 ease-in-out">
+    <section id="home" className="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-15"
@@ -224,23 +224,49 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Animated Background Particles */}
-      {[...Array(8)].map((_, i) => (
+      {/* Enhanced Animated Background Particles */}
+      {[...Array(15)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 bg-white/20 rounded-full"
+          className="absolute w-1 h-1 bg-white/30 rounded-full"
           style={{
-            left: `${20 + i * 10}%`,
-            top: `${30 + (i % 3) * 20}%`,
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
           }}
           animate={{
-            y: [0, -100, 0],
+            y: [0, -150, 0],
+            x: [0, Math.random() * 100 - 50, 0],
             opacity: [0, 1, 0],
+            scale: [0.5, 1.5, 0.5],
           }}
           transition={{
-            duration: 3 + i * 0.5,
+            duration: 4 + Math.random() * 3,
             repeat: Infinity,
-            delay: i * 0.3,
+            delay: i * 0.2,
+            ease: "easeInOut"
+          }}
+        />
+      ))}
+      
+      {/* Floating Light Orbs */}
+      {[...Array(6)].map((_, i) => (
+        <motion.div
+          key={`orb-${i}`}
+          className="absolute w-4 h-4 bg-gradient-to-r from-sky-300/20 to-light-red-300/20 rounded-full blur-sm"
+          style={{
+            left: `${15 + i * 15}%`,
+            top: `${20 + (i % 2) * 60}%`,
+          }}
+          animate={{
+            y: [0, -80, 0],
+            x: [0, Math.random() * 40 - 20, 0],
+            scale: [1, 1.8, 1],
+            opacity: [0.3, 0.8, 0.3],
+          }}
+          transition={{
+            duration: 5 + i * 0.8,
+            repeat: Infinity,
+            delay: i * 0.7,
             ease: "easeInOut"
           }}
         />

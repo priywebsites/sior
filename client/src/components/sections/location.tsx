@@ -4,7 +4,7 @@ import { BUSINESS_INFO } from "@/lib/constants";
 
 export default function Location() {
   return (
-    <section id="location" className="py-20 bg-gradient-to-b from-white via-cool-blue-50 to-slate-100 transition-all duration-1000 ease-in-out">
+    <section id="location" className="py-20 bg-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"

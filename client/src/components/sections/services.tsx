@@ -19,7 +19,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-slate-900 via-slate-50 to-white relative overflow-hidden transition-all duration-1000 ease-in-out">
+    <section id="services" className="py-20 bg-slate-50 relative overflow-hidden">
       {/* Animated Background Elements */}
       <motion.div
         className="absolute top-10 right-10 w-32 h-32 bg-light-red-100 rounded-full opacity-50"
