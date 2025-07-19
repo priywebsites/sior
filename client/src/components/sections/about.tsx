@@ -7,7 +7,7 @@ export default function About() {
   const { isOpen, message, formattedHours } = useBusinessHours();
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gradient-to-b from-white via-cool-blue-25 to-slate-50 transition-all duration-1000 ease-in-out">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div

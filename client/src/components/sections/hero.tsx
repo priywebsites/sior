@@ -16,7 +16,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden transition-all duration-1000 ease-in-out">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-15"

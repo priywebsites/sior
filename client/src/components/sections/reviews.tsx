@@ -10,7 +10,7 @@ export default function Reviews() {
   };
 
   return (
-    <section id="reviews" className="py-20 bg-slate-50 relative overflow-hidden">
+    <section id="reviews" className="py-20 bg-gradient-to-b from-slate-100 via-slate-50 to-white relative overflow-hidden transition-all duration-1000 ease-in-out">
       {/* Animated Background Elements */}
       <motion.div
         className="absolute top-16 right-20 w-36 h-36 bg-light-red-100 rounded-full opacity-40"

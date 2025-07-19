@@ -10,7 +10,7 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-20 bg-white relative overflow-hidden">
+    <section id="gallery" className="py-20 bg-gradient-to-b from-white via-slate-50 to-slate-100 relative overflow-hidden transition-all duration-1000 ease-in-out">
       {/* Animated Background Elements */}
       <motion.div
         className="absolute top-20 left-10 w-40 h-40 bg-light-red-100 rounded-full opacity-30"
