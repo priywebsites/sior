@@ -155,31 +155,17 @@ export default function Services() {
                   {service.description}
                 </motion.p>
 
-                <div className="flex items-center justify-between relative z-10">
-                  <motion.div 
-                    className="text-3xl font-bold text-cool-blue-600"
-                    animate={{
-                      scale: [1, 1.05, 1],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      delay: index * 0.3
-                    }}
-                  >
-                    {service.price}
-                  </motion.div>
-
+                <div className="flex justify-center relative z-10">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
                     <Button
                       onClick={callBusiness}
-                      className="bg-light-red-500 hover:bg-light-red-600 text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg hover:shadow-xl transition-all duration-300"
-                      size="sm"
+                      className="bg-light-red-500 hover:bg-light-red-600 text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 w-full"
+                      size="lg"
                     >
-                      <Phone size={16} className="mr-2" />
+                      <Phone size={18} className="mr-2" />
                       Book Now
                     </Button>
                   </motion.div>

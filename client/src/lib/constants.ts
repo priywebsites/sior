@@ -1,3 +1,10 @@
+// Import the actual images
+import gallery1 from "@assets/Screen Shot 2025-07-19 at 4.55.31 PM_1752962336288.png";
+import gallery2 from "@assets/Screen Shot 2025-07-19 at 4.55.48 PM_1752962333291.png";
+import gallery3 from "@assets/Screen Shot 2025-07-19 at 4.56.20 PM_1752962331767.png";
+import gallery4 from "@assets/Screen Shot 2025-07-19 at 4.58.32 PM_1752962330046.png";
+import gallery5 from "@assets/Screen Shot 2025-07-19 at 4.59.05 PM_1752962359546.png";
+
 export const BUSINESS_INFO = {
   name: "Sion Barber Shop",
   phone: "+1 (321) 437-5592",
@@ -21,42 +28,36 @@ export const SERVICES = [
     id: 1,
     name: "Haircuts",
     description: "Precision cuts tailored to your face shape and personal style",
-    price: "$35+",
     icon: "Scissors"
   },
   {
     id: 2,
     name: "Beard Trims",
     description: "Professional beard shaping and grooming for the perfect look",
-    price: "$25+",
     icon: "User"
   },
   {
     id: 3,
     name: "Straight Razor Shaves",
     description: "Traditional hot towel shaves for the ultimate barbershop experience",
-    price: "$40+",
     icon: "Sparkles"
   },
   {
     id: 4,
     name: "Fades",
     description: "Expert fade cuts from subtle to dramatic gradients",
-    price: "$30+",
     icon: "Layers"
   },
   {
     id: 5,
     name: "Line-Ups",
     description: "Crisp, clean edge-ups for that sharp, defined look",
-    price: "$20+",
     icon: "Square"
   },
   {
     id: 6,
     name: "Kids' Cuts",
     description: "Patient, gentle cuts for children in a friendly environment",
-    price: "$25+",
     icon: "Heart"
   }
 ];
@@ -97,42 +98,27 @@ export const REVIEWS = [
 export const GALLERY_IMAGES = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600",
-    alt: "Professional haircut result - modern fade"
+    url: gallery1,
+    alt: "Professional barber working on precise haircut in modern barbershop"
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600",
-    alt: "Classic beard trim and styling"
+    url: gallery2,
+    alt: "Barbershop interior showing professional workstation and atmosphere"
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600",
-    alt: "Professional barber tools arrangement"
+    url: gallery3,
+    alt: "Perfect side profile showing precision fade and clean lines"
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600",
-    alt: "Traditional straight razor shave"
+    url: gallery4,
+    alt: "Classic barbershop styling showing professional beard trim technique"
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600",
-    alt: "Modern barbershop styling session"
-  },
-  {
-    id: 6,
-    url: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600",
-    alt: "Modern barbershop interior"
-  },
-  {
-    id: 7,
-    url: "https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600",
-    alt: "Perfect fade haircut showcase"
-  },
-  {
-    id: 8,
-    url: "https://images.unsplash.com/photo-1541533848490-c1011faa5c5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600",
-    alt: "Premium barbershop experience"
+    url: gallery5,
+    alt: "Modern pompadour haircut showcasing expert styling and attention to detail"
   }
 ];
