@@ -1,0 +1,63 @@
+I want you to build me a fully responsive, modern, animated website for a barbershop called Sion Barber Shop. This is not a basic site — I need it to feel premium, sleek, and alive. Put a lot of focus on the following key principles:
+
+🔷 MUST-HAVE DESIGN EMPHASIS:
+Modern: Sleek, sharp UI using a clean sans-serif font, a cool blue-light color theme, and smart layout decisions.
+Clean: Maximize whitespace, avoid clutter, use clear hierarchy with polished visual structure.
+Animations EVERYWHERE: Add subtle but stylish animations — scroll reveals, fade-ins, hover effects, animated transitions between sections. Make every interaction feel smooth and deliberate.
+All buttons should have rounded corners (no sharp edges).
+
+📦 Functional Requirements:
+Build the project with clean file structure so it can be deployed directly to Vercel.
+No contact forms. Don’t add any contact form at all.
+Include a live, embedded Google Maps section that shows the barbershop’s location. Here's the map link:
+👉 {https://www.google.com/maps/place/Sion+Barber+Shop/@28.2582658,-81.4455731,17z/data=!3m1!4b1!4m6!3m5!1s0x88dd837133c1170f:0x8beec418bc57da80!8m2!3d28.2582611!4d-81.4429982!16s%2Fg%2F11gf5v324g?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D}
+🧩 Content Sections (with animations):
+Hero Section
+
+Bold animated headline, smooth text fade-in.
+CTA button to scroll to services.
+Include floating or parallax effects for visual flair.
+About the Barbershop
+
+Small intro text + animated visuals.
+Phone: +1 (321) 437-5592
+Facebook: https://www.facebook.com/sionbabershop
+Hours of Operation
+Show a full weekly schedule:
+
+Saturday: 9 a.m.–9 p.m.
+Sunday: Closed
+Monday: Closed
+Tuesday: 9 a.m.–9 p.m.
+Wednesday: 9 a.m.–9 p.m.
+Thursday: 9 a.m.–9 p.m.
+Friday: 9 a.m.–9 p.m.
+Include dynamic open/closed status based on current day/time.
+Services Section
+Include a clean grid or cards for up to 6 services, such as:
+
+Haircuts
+Beard Trims
+Straight Razor Shaves
+Fades
+Line-Ups
+Kids’ Cuts
+“And more...” button (for future expansion)
+All service cards should have hover animations.
+Our Work Gallery
+
+Include a stylish gallery with sliding/fading transitions.
+Display high-quality sample images (placeholder OK).
+Customer Reviews
+
+Include 3–5 animated review blocks/testimonials.
+Sliding carousel preferred for mobile responsiveness.
+Map Location Section
+
+Embed the Google Maps iframe clearly with padding/margin.
+Label it with “Find Us Here”.
+⚙️ Tech Notes:
+Mobile-first responsive design.
+Smooth scrolling enabled.
+Final result should look and feel like a cutting-edge, interactive barbershop site with an emphasis on a blue-light modern aesthetic, great animations, and ready-to-go Vercel deployment.
+Make sure the user immediately feels like this barbershop is stylish, top-tier, and professional.
