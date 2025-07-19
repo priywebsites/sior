@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222, 84%, 4.9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 84%, 4.9%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222, 84%, 4.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222, 84%, 4.9%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(207, 90%, 54%);
+  --radius: 0.75rem;
+  
+  /* Custom barbershop colors */
+  --cool-blue-50: hsl(214, 100%, 97%);
+  --cool-blue-100: hsl(214, 95%, 93%);
+  --cool-blue-200: hsl(213, 97%, 87%);
+  --cool-blue-300: hsl(212, 96%, 78%);
+  --cool-blue-400: hsl(213, 94%, 68%);
+  --cool-blue-500: hsl(207, 90%, 54%);
+  --cool-blue-600: hsl(208, 79%, 51%);
+  --cool-blue-700: hsl(221, 83%, 53%);
+  --cool-blue-800: hsl(224, 76%, 48%);
+  --cool-blue-900: hsl(224, 64%, 33%);
+}
+
+.dark {
+  --background: hsl(222, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --popover: hsl(222, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(217, 32%, 17%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 32%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(207, 90%, 54%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .hero-bg {
+    background: linear-gradient(135deg, hsl(224, 76%, 48%) 0%, hsl(207, 90%, 54%) 50%, hsl(199, 89%, 48%) 100%);
+  }
+
+  .text-cool-blue-50 { color: var(--cool-blue-50); }
+  .text-cool-blue-100 { color: var(--cool-blue-100); }
+  .text-cool-blue-200 { color: var(--cool-blue-200); }
+  .text-cool-blue-300 { color: var(--cool-blue-300); }
+  .text-cool-blue-400 { color: var(--cool-blue-400); }
+  .text-cool-blue-500 { color: var(--cool-blue-500); }
+  .text-cool-blue-600 { color: var(--cool-blue-600); }
+  .text-cool-blue-700 { color: var(--cool-blue-700); }
+  .text-cool-blue-800 { color: var(--cool-blue-800); }
+  .text-cool-blue-900 { color: var(--cool-blue-900); }
+
+  .bg-cool-blue-50 { background-color: var(--cool-blue-50); }
+  .bg-cool-blue-100 { background-color: var(--cool-blue-100); }
+  .bg-cool-blue-200 { background-color: var(--cool-blue-200); }
+  .bg-cool-blue-300 { background-color: var(--cool-blue-300); }
+  .bg-cool-blue-400 { background-color: var(--cool-blue-400); }
+  .bg-cool-blue-500 { background-color: var(--cool-blue-500); }
+  .bg-cool-blue-600 { background-color: var(--cool-blue-600); }
+  .bg-cool-blue-700 { background-color: var(--cool-blue-700); }
+  .bg-cool-blue-800 { background-color: var(--cool-blue-800); }
+  .bg-cool-blue-900 { background-color: var(--cool-blue-900); }
+
+  .border-cool-blue-50 { border-color: var(--cool-blue-50); }
+  .border-cool-blue-100 { border-color: var(--cool-blue-100); }
+  .border-cool-blue-200 { border-color: var(--cool-blue-200); }
+  .border-cool-blue-300 { border-color: var(--cool-blue-300); }
+  .border-cool-blue-400 { border-color: var(--cool-blue-400); }
+  .border-cool-blue-500 { border-color: var(--cool-blue-500); }
+  .border-cool-blue-600 { border-color: var(--cool-blue-600); }
+  .border-cool-blue-700 { border-color: var(--cool-blue-700); }
+  .border-cool-blue-800 { border-color: var(--cool-blue-800); }
+  .border-cool-blue-900 { border-color: var(--cool-blue-900); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.7s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.7s ease-out;
+}
+
+.animate-bounce-gentle {
+  animation: bounceGentle 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
