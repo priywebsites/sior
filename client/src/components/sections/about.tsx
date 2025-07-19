@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, Facebook, Clock } from "lucide-react";
 import { useBusinessHours } from "@/hooks/use-business-hours";
-import { BUSINESS_INFO } from "@/lib/constants";
+import { BUSINESS_INFO, TEAM_PHOTO } from "@/lib/constants";
 
 export default function About() {
   const { isOpen, message, formattedHours } = useBusinessHours();
@@ -17,8 +17,8 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800"
-              alt="Modern barbershop interior"
+              src={TEAM_PHOTO}
+              alt="Sion Barber Shop professional team of expert barbers"
               className="rounded-2xl shadow-2xl w-full h-auto"
             />
           </motion.div>

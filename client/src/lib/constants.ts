@@ -4,6 +4,8 @@ import gallery2 from "@assets/Screen Shot 2025-07-19 at 4.55.48 PM_1752962333291
 import gallery3 from "@assets/Screen Shot 2025-07-19 at 4.56.20 PM_1752962331767.png";
 import gallery4 from "@assets/Screen Shot 2025-07-19 at 4.58.32 PM_1752962330046.png";
 import gallery5 from "@assets/Screen Shot 2025-07-19 at 4.59.05 PM_1752962359546.png";
+import teamPhoto from "@assets/Screen Shot 2025-07-19 at 4.55.07 PM_1752962636701.png";
+import barbershopInterior from "@assets/Screen Shot 2025-07-19 at 5.02.27 PM_1752962638160.png";
 
 export const BUSINESS_INFO = {
   name: "Sion Barber Shop",
@@ -122,3 +124,6 @@ export const GALLERY_IMAGES = [
     alt: "Modern pompadour haircut showcasing expert styling and attention to detail"
   }
 ];
+
+export const TEAM_PHOTO = teamPhoto;
+export const BARBERSHOP_INTERIOR = barbershopInterior;

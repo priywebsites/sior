@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronDown, Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { BUSINESS_INFO } from "@/lib/constants";
+import { BUSINESS_INFO, BARBERSHOP_INTERIOR } from "@/lib/constants";
 
 export default function Hero() {
   const scrollToServices = () => {
@@ -17,6 +17,15 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-15"
+        style={{
+          backgroundImage: `url(${BARBERSHOP_INTERIOR})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
       {/* Enhanced Floating Elements */}
       <motion.div
         className="absolute top-20 left-10 w-24 h-24 bg-white/20 rounded-full blur-sm"
