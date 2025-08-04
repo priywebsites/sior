@@ -50,7 +50,6 @@ export default function Services() {
           ease: "easeInOut"
         }}
       />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           className="text-center mb-20"
@@ -243,7 +242,7 @@ export default function Services() {
                 <Plus className="mr-3" size={24} />
                 <span>More Services Available</span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent text-[#000000]"
                   animate={{
                     x: [-150, 150],
                   }}
