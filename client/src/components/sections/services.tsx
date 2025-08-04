@@ -19,28 +19,29 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-20 bg-slate-50 relative overflow-hidden">
-      {/* Animated Background Elements */}
+    <section id="services" className="py-24 bg-gray-50 relative overflow-hidden">
+      {/* Premium Background Elements */}
       <motion.div
-        className="absolute top-10 right-10 w-32 h-32 bg-light-red-100 rounded-full opacity-50"
+        className="absolute top-10 right-10 w-40 h-40 border border-gold-300/20 rotate-45 opacity-30"
         animate={{
-          scale: [1, 1.2, 1],
-          rotate: [0, 180, 360],
+          scale: [1, 1.1, 1],
+          rotate: [45, 135, 45],
         }}
         transition={{
-          duration: 8,
+          duration: 10,
           repeat: Infinity,
           ease: "easeInOut"
         }}
       />
       <motion.div
-        className="absolute bottom-20 left-20 w-24 h-24 bg-cool-blue-100 rounded-full opacity-60"
+        className="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-br from-gray-200/30 to-gray-400/30 rounded-full opacity-40"
         animate={{
-          y: [0, -20, 0],
-          x: [0, 20, 0],
+          y: [0, -25, 0],
+          x: [0, 15, 0],
+          scale: [1, 1.2, 1],
         }}
         transition={{
-          duration: 6,
+          duration: 8,
           repeat: Infinity,
           ease: "easeInOut"
         }}
@@ -55,16 +56,16 @@ export default function Services() {
           transition={{ duration: 1, type: "spring", stiffness: 100 }}
         >
           <motion.h2 
-            className="text-5xl md:text-7xl font-bold text-slate-900 mb-8"
+            className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 tracking-tight"
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, delay: 0.2 }}
           >
-            Our <span className="text-cool-blue-600 relative">
-              Services
+            PREMIUM <span className="text-gold-600 relative">
+              SERVICES
               <motion.div
-                className="absolute -bottom-2 left-0 w-full h-1 bg-light-red-400 rounded-full"
+                className="absolute -bottom-3 left-0 w-full h-1 bg-gold-500 rounded-full"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}

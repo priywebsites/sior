@@ -10,29 +10,30 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-20 bg-white relative overflow-hidden">
-      {/* Animated Background Elements */}
+    <section id="gallery" className="py-24 bg-white relative overflow-hidden">
+      {/* Premium Background Elements */}
       <motion.div
-        className="absolute top-20 left-10 w-40 h-40 bg-light-red-100 rounded-full opacity-30"
+        className="absolute top-20 left-10 w-48 h-48 border-2 border-gray-200/30 opacity-20"
         animate={{
-          scale: [1, 1.3, 1],
-          x: [0, 30, 0],
-          y: [0, -20, 0],
+          scale: [1, 1.2, 1],
+          x: [0, 25, 0],
+          y: [0, -15, 0],
+          rotate: [0, 45, 0],
         }}
         transition={{
-          duration: 10,
+          duration: 12,
           repeat: Infinity,
           ease: "easeInOut"
         }}
       />
       <motion.div
-        className="absolute bottom-10 right-10 w-28 h-28 bg-cool-blue-100 rounded-full opacity-40"
+        className="absolute bottom-10 right-10 w-32 h-32 bg-gradient-to-br from-gray-100/40 to-gray-300/40 opacity-30"
         animate={{
-          rotate: [0, 360],
-          scale: [1, 0.8, 1],
+          rotate: [0, 180, 360],
+          scale: [1, 0.9, 1],
         }}
         transition={{
-          duration: 12,
+          duration: 15,
           repeat: Infinity,
           ease: "easeInOut"
         }}
@@ -47,16 +48,16 @@ export default function Gallery() {
           transition={{ duration: 1.2, type: "spring", stiffness: 80 }}
         >
           <motion.h2 
-            className="text-5xl md:text-7xl font-bold text-slate-900 mb-8"
+            className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 tracking-tight"
             initial={{ opacity: 0, rotateX: -90 }}
             whileInView={{ opacity: 1, rotateX: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.2 }}
           >
-            Our <span className="text-cool-blue-600 relative">
-              Work
+            OUR <span className="text-gold-600 relative">
+              PORTFOLIO
               <motion.div
-                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-20 h-2 bg-light-red-400 rounded-full"
+                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gold-500 rounded-full"
                 initial={{ scaleX: 0, opacity: 0 }}
                 whileInView={{ scaleX: 1, opacity: 1 }}
                 viewport={{ once: true }}

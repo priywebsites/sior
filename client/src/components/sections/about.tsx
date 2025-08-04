@@ -7,7 +7,7 @@ export default function About() {
   const { isOpen, message, formattedHours } = useBusinessHours();
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-24 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -29,11 +29,11 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              About <span className="text-cool-blue-600 relative">
-                {BUSINESS_INFO.name}
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
+              ABOUT <span className="text-gold-500 relative">
+                {BUSINESS_INFO.name.toUpperCase()}
                 <motion.div
-                  className="absolute -bottom-2 left-0 w-full h-1 bg-light-red-400 rounded-full"
+                  className="absolute -bottom-3 left-0 w-full h-1 bg-gold-500 rounded-full"
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
@@ -41,10 +41,9 @@ export default function About() {
                 />
               </span>
             </h2>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              At {BUSINESS_INFO.name}, we blend traditional barbering techniques with contemporary style. 
-              Our skilled barbers are dedicated to providing you with an exceptional grooming experience 
-              in a modern, comfortable environment.
+            <p className="text-xl text-gray-300 mb-10 leading-relaxed font-light">
+              At {BUSINESS_INFO.name}, we redefine the art of traditional barbering with modern sophistication. 
+              Our master barbers deliver unparalleled grooming experiences in an atmosphere of luxury and precision.
             </p>
 
             <div className="space-y-6">
@@ -56,14 +55,14 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="w-12 h-12 bg-cool-blue-100 rounded-full flex items-center justify-center">
-                  <Phone className="text-cool-blue-600" size={20} />
+                <div className="w-12 h-12 bg-gold-500/20 rounded-none flex items-center justify-center">
+                  <Phone className="text-gold-400" size={20} />
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">Call Us</p>
+                  <p className="font-semibold text-white tracking-wider">CALL US</p>
                   <a
                     href={`tel:${BUSINESS_INFO.phone}`}
-                    className="text-slate-600 hover:text-cool-blue-600 transition-colors"
+                    className="text-gray-300 hover:text-gold-400 transition-colors text-lg"
                   >
                     {BUSINESS_INFO.phone}
                   </a>

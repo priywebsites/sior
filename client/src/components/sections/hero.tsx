@@ -17,136 +17,142 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with Premium Overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-15"
+        className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{
           backgroundImage: `url(${BARBERSHOP_INTERIOR})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       />
-      {/* Enhanced Floating Elements */}
+      
+      {/* Premium Geometric Elements */}
       <motion.div
-        className="absolute top-20 left-10 w-24 h-24 bg-white/20 rounded-full blur-sm"
+        className="absolute top-20 left-10 w-32 h-32 border border-gold-500/30 rounded-lg rotate-45"
+        animate={{
+          y: [0, -20, 0],
+          rotate: [45, 75, 45],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      
+      <motion.div
+        className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-to-br from-gray-600/20 to-gray-800/20 rounded-full"
         animate={{
           y: [0, -30, 0],
-          x: [0, 10, 0],
           scale: [1, 1.2, 1],
+          opacity: [0.3, 0.7, 0.3],
         }}
         transition={{
           duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      <motion.div
-        className="absolute bottom-32 right-16 w-20 h-20 bg-light-red-300/30 rounded-full"
-        animate={{
-          y: [0, -25, 0],
-          rotate: [0, 180, 360],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      <motion.div
-        className="absolute top-1/3 right-20 w-16 h-16 bg-white/15 rounded-full"
-        animate={{
-          y: [0, -20, 0],
-          x: [0, -15, 0],
-          opacity: [0.5, 1, 0.5],
-        }}
-        transition={{
-          duration: 3.5,
           repeat: Infinity,
           ease: "easeInOut",
           delay: 1
         }}
       />
+      
       <motion.div
-        className="absolute top-16 right-1/3 w-12 h-12 bg-sky-300/20 rounded-full"
+        className="absolute top-1/3 right-20 w-20 h-20 border-2 border-white/20 rounded-full"
         animate={{
-          y: [0, -40, 0],
-          rotate: [0, -90, 0],
+          rotate: [0, 360],
+          scale: [1, 1.3, 1],
         }}
         transition={{
-          duration: 6,
+          duration: 8,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+      />
+      
+      <motion.div
+        className="absolute top-16 right-1/3 w-16 h-16 bg-gold-500/20 transform rotate-45"
+        animate={{
+          y: [0, -25, 0],
+          rotate: [45, 135, 45],
+        }}
+        transition={{
+          duration: 5,
           repeat: Infinity,
           ease: "easeInOut",
           delay: 0.5
         }}
       />
+      
       <motion.div
-        className="absolute bottom-20 left-1/4 w-8 h-8 bg-light-red-400/40 rounded-full"
+        className="absolute bottom-20 left-1/4 w-12 h-12 bg-gradient-to-r from-gray-500/30 to-gray-700/30 rounded-full"
         animate={{
           scale: [1, 1.5, 1],
           opacity: [0.4, 0.8, 0.4],
+          x: [0, 20, 0],
         }}
         transition={{
-          duration: 2.5,
+          duration: 3,
           repeat: Infinity,
           ease: "easeInOut",
           delay: 2
         }}
       />
 
-      <div className="text-center text-white px-4 relative z-10 max-w-5xl mx-auto">
+      <div className="text-center text-white px-4 relative z-10 max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
         >
           <motion.h1 
-            className="text-6xl md:text-8xl font-bold mb-8 leading-tight"
-            initial={{ opacity: 0, y: 100, rotateX: -90 }}
+            className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight text-shadow-premium"
+            initial={{ opacity: 0, y: 80, rotateX: -45 }}
             animate={{ opacity: 1, y: 0, rotateX: 0 }}
             transition={{ 
               duration: 1.2, 
               delay: 0.3,
               type: "spring",
-              stiffness: 100,
-              damping: 12
+              stiffness: 80,
+              damping: 15
             }}
           >
-            Premium{" "}
+            SION{" "}
             <motion.span 
-              className="text-sky-300 inline-block"
+              className="text-gold-400 inline-block"
               animate={{ 
                 textShadow: [
-                  "0px 0px 20px rgba(125, 211, 252, 0.5)",
-                  "0px 0px 40px rgba(125, 211, 252, 0.8)",
-                  "0px 0px 20px rgba(125, 211, 252, 0.5)"
+                  "0px 0px 20px rgba(212, 175, 55, 0.6)",
+                  "0px 0px 40px rgba(212, 175, 55, 0.9)",
+                  "0px 0px 20px rgba(212, 175, 55, 0.6)"
                 ]
               }}
               transition={{
-                duration: 2,
+                duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
             >
-              Barbershop
+              BARBER
             </motion.span>
             <br />
             <motion.span
-              className="text-light-red-300"
+              className="text-gray-200"
               initial={{ opacity: 0, x: -200 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.8 }}
             >
-              Experience
+              PREMIUM GROOMING
             </motion.span>
           </motion.h1>
           
           <motion.p 
-            className="text-2xl md:text-3xl mb-12 text-blue-100 max-w-3xl mx-auto leading-relaxed font-light"
+            className="text-xl md:text-2xl mb-12 text-gray-300 max-w-4xl mx-auto leading-relaxed font-light tracking-wide"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            Where style meets precision. Professional cuts, classic shaves, and modern grooming.
+            Where sophistication meets precision. Experience the art of traditional barbering with modern luxury.
           </motion.p>
           
           <motion.div
@@ -161,7 +167,7 @@ export default function Hero() {
             >
               <Button
                 onClick={callBusiness}
-                className="bg-light-red-500 hover:bg-light-red-600 text-white px-10 py-7 rounded-full text-xl font-bold shadow-2xl hover:shadow-light-red-500/50 transition-all duration-300 relative overflow-hidden group"
+                className="gold-gradient hover:bg-gold-600 text-black px-12 py-8 rounded-none text-xl font-bold shadow-2xl hover:shadow-gold-500/50 transition-all duration-300 relative overflow-hidden group tracking-wider"
                 size="lg"
               >
                 <motion.div
@@ -176,7 +182,7 @@ export default function Hero() {
                   }}
                 />
                 <Phone className="mr-3" size={24} />
-                <span className="relative z-10">Book Now - Call Us</span>
+                <span className="relative z-10">BOOK APPOINTMENT</span>
               </Button>
             </motion.div>
             
@@ -186,11 +192,11 @@ export default function Hero() {
             >
               <Button
                 onClick={scrollToServices}
-                className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-10 py-7 rounded-full text-xl font-semibold hover:bg-white/20 transition-all duration-300 hover:shadow-2xl"
+                className="bg-transparent border-2 border-white text-white px-12 py-8 rounded-none text-xl font-semibold hover:bg-white hover:text-black transition-all duration-300 hover:shadow-2xl tracking-wider"
                 size="lg"
               >
                 <Calendar className="mr-3" size={24} />
-                <span className="mr-3">Explore Services</span>
+                <span className="mr-3">VIEW SERVICES</span>
                 <motion.div
                   animate={{
                     y: [0, -8, 0],
@@ -214,59 +220,59 @@ export default function Hero() {
             transition={{ delay: 1.4, duration: 0.8 }}
           >
             <motion.p 
-              className="text-blue-200 text-lg"
+              className="text-gray-400 text-lg tracking-wider font-light"
               animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              {BUSINESS_INFO.phone} • Walk-ins Welcome
+              {BUSINESS_INFO.phone} • WALK-INS WELCOME
             </motion.p>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Enhanced Animated Background Particles */}
-      {[...Array(15)].map((_, i) => (
+      {/* Premium Animated Particles */}
+      {[...Array(12)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 bg-white/30 rounded-full"
+          className="absolute w-1 h-1 bg-gray-400/40 rounded-full"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
           }}
           animate={{
-            y: [0, -150, 0],
-            x: [0, Math.random() * 100 - 50, 0],
-            opacity: [0, 1, 0],
-            scale: [0.5, 1.5, 0.5],
+            y: [0, -120, 0],
+            x: [0, Math.random() * 60 - 30, 0],
+            opacity: [0, 0.8, 0],
+            scale: [0.5, 1.2, 0.5],
           }}
           transition={{
-            duration: 4 + Math.random() * 3,
+            duration: 6 + Math.random() * 2,
             repeat: Infinity,
-            delay: i * 0.2,
+            delay: i * 0.3,
             ease: "easeInOut"
           }}
         />
       ))}
       
-      {/* Floating Light Orbs */}
-      {[...Array(6)].map((_, i) => (
+      {/* Sophisticated Light Elements */}
+      {[...Array(4)].map((_, i) => (
         <motion.div
-          key={`orb-${i}`}
-          className="absolute w-4 h-4 bg-gradient-to-r from-sky-300/20 to-light-red-300/20 rounded-full blur-sm"
+          key={`light-${i}`}
+          className="absolute w-6 h-6 bg-gradient-to-r from-gold-400/15 to-gray-300/15 rounded-full blur-sm"
           style={{
-            left: `${15 + i * 15}%`,
-            top: `${20 + (i % 2) * 60}%`,
+            left: `${20 + i * 20}%`,
+            top: `${25 + (i % 2) * 50}%`,
           }}
           animate={{
-            y: [0, -80, 0],
-            x: [0, Math.random() * 40 - 20, 0],
-            scale: [1, 1.8, 1],
-            opacity: [0.3, 0.8, 0.3],
+            y: [0, -60, 0],
+            x: [0, Math.random() * 30 - 15, 0],
+            scale: [1, 1.5, 1],
+            opacity: [0.2, 0.6, 0.2],
           }}
           transition={{
-            duration: 5 + i * 0.8,
+            duration: 7 + i * 0.5,
             repeat: Infinity,
-            delay: i * 0.7,
+            delay: i * 1.2,
             ease: "easeInOut"
           }}
         />

@@ -10,29 +10,30 @@ export default function Reviews() {
   };
 
   return (
-    <section id="reviews" className="py-20 bg-slate-50 relative overflow-hidden">
-      {/* Animated Background Elements */}
+    <section id="reviews" className="py-24 bg-gray-100 relative overflow-hidden">
+      {/* Sophisticated Background Elements */}
       <motion.div
-        className="absolute top-16 right-20 w-36 h-36 bg-light-red-100 rounded-full opacity-40"
+        className="absolute top-16 right-20 w-40 h-40 border border-gold-400/20 rotate-45 opacity-30"
         animate={{
-          scale: [1, 1.4, 1],
-          rotate: [0, 180, 360],
-          x: [0, -30, 0],
+          scale: [1, 1.3, 1],
+          rotate: [45, 135, 45],
+          x: [0, -20, 0],
         }}
         transition={{
-          duration: 12,
+          duration: 14,
           repeat: Infinity,
           ease: "easeInOut"
         }}
       />
       <motion.div
-        className="absolute bottom-24 left-16 w-28 h-28 bg-cool-blue-100 rounded-full opacity-50"
+        className="absolute bottom-24 left-16 w-32 h-32 bg-gradient-to-br from-gray-300/20 to-gray-500/20 opacity-40"
         animate={{
-          y: [0, -40, 0],
-          scale: [1, 0.8, 1],
+          y: [0, -35, 0],
+          scale: [1, 0.9, 1],
+          rotate: [0, 90, 180],
         }}
         transition={{
-          duration: 8,
+          duration: 10,
           repeat: Infinity,
           ease: "easeInOut"
         }}
@@ -47,16 +48,16 @@ export default function Reviews() {
           transition={{ duration: 1.2, type: "spring", stiffness: 80 }}
         >
           <motion.h2 
-            className="text-5xl md:text-7xl font-bold text-slate-900 mb-8"
+            className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 tracking-tight"
             initial={{ opacity: 0, rotateX: -90 }}
             whileInView={{ opacity: 1, rotateX: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.2 }}
           >
-            Customer <span className="text-cool-blue-600 relative">
-              Reviews
+            CLIENT <span className="text-gold-600 relative">
+              TESTIMONIALS
               <motion.div
-                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-2 bg-light-red-400 rounded-full"
+                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gold-500 rounded-full"
                 initial={{ scaleX: 0, opacity: 0 }}
                 whileInView={{ scaleX: 1, opacity: 1 }}
                 viewport={{ once: true }}
