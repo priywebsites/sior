@@ -38,7 +38,6 @@ export default function Gallery() {
           ease: "easeInOut"
         }}
       />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           className="text-center mb-20"
@@ -241,7 +240,7 @@ export default function Gallery() {
                   size="lg"
                 >
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                    className="absolute inset-0 from-transparent via-white/30 to-transparent text-[#000000] bg-[#000000]"
                     animate={{
                       x: [-300, 300],
                     }}
