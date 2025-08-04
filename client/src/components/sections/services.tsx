@@ -174,7 +174,7 @@ export default function Services() {
                       className="blue-gradient hover:bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 w-full hover-blue-glow"
                       size="lg"
                     >
-                      <Phone size={18} className="mr-2" />
+                      <Calendar size={18} className="mr-2" />
                       Book Now
                     </Button>
                   </motion.div>
@@ -211,8 +211,8 @@ export default function Services() {
               whileTap={{ scale: 0.95 }}
             >
               <Button
-                onClick={callBusiness}
-                className="bg-light-red-500 hover:bg-light-red-600 text-white px-10 py-6 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
+                onClick={bookOnBooksy}
+                className="blue-gradient hover:bg-blue-600 text-white px-10 py-6 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
                 size="lg"
               >
                 <motion.div
@@ -226,8 +226,8 @@ export default function Services() {
                     ease: "linear"
                   }}
                 />
-                <Phone className="mr-3" size={24} />
-                <span className="relative z-10 text-[#000000]">Book Any Service Now</span>
+                <Calendar className="mr-3" size={24} />
+                <span className="relative z-10">Book Any Service Now</span>
               </Button>
             </motion.div>
 
@@ -236,13 +236,14 @@ export default function Services() {
               whileTap={{ scale: 0.95 }}
             >
               <Button
-                className="bg-cool-blue-600 text-white px-10 py-6 rounded-full text-xl font-semibold hover:bg-cool-blue-700 transition-all duration-300 hover:shadow-xl relative overflow-hidden"
+                onClick={bookOnBooksy}
+                className="bg-gray-800 hover:bg-gray-900 text-white px-10 py-6 rounded-full text-xl font-semibold transition-all duration-300 hover:shadow-xl relative overflow-hidden"
                 size="lg"
               >
-                <Plus className="mr-3" size={24} />
-                <span>More Services Available</span>
+                <Calendar className="mr-3" size={24} />
+                <span>Every Cut is a Work of Art</span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent text-[#000000]"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
                   animate={{
                     x: [-150, 150],
                   }}
@@ -258,7 +259,7 @@ export default function Services() {
           </div>
 
           <motion.div
-            className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto border border-light-red-100"
+            className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto border border-blue-100"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -269,9 +270,9 @@ export default function Services() {
               animate={{ opacity: [0.8, 1, 0.8] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <span className="font-bold text-light-red-600">Walk-ins Welcome!</span> 
+              <span className="font-bold text-blue-600">Walk-ins Welcome!</span> 
               <br />
-              Call <span className="font-bold text-cool-blue-600">{BUSINESS_INFO.phone}</span> to book or just drop by
+              Call <span className="font-bold text-blue-600">{BUSINESS_INFO.phone}</span> to book or just drop by
             </motion.p>
           </motion.div>
         </motion.div>
