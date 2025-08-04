@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Scissors, User, Sparkles, Layers, Square, Heart, Plus, Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SERVICES } from "@/lib/constants";
+import { SERVICES, BOOKSY_URL } from "@/lib/constants";
 import { BUSINESS_INFO } from "@/lib/constants";
 
 const iconMap = {
@@ -18,11 +18,15 @@ export default function Services() {
     window.open(`tel:${BUSINESS_INFO.phone}`, '_self');
   };
 
+  const bookOnBooksy = () => {
+    window.open(BOOKSY_URL, '_blank');
+  };
+
   return (
     <section id="services" className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Premium Background Elements */}
       <motion.div
-        className="absolute top-10 right-10 w-40 h-40 border border-gold-300/20 rotate-45 opacity-30"
+        className="absolute top-10 right-10 w-40 h-40 border border-blue-300/20 rotate-45 opacity-30"
         animate={{
           scale: [1, 1.1, 1],
           rotate: [45, 135, 45],
@@ -62,10 +66,10 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 1.2, delay: 0.2 }}
           >
-            PREMIUM <span className="text-gold-600 relative">
+            PREMIUM <span className="text-blue-600 relative">
               SERVICES
               <motion.div
-                className="absolute -bottom-3 left-0 w-full h-1 bg-gold-500 rounded-full"
+                className="absolute -bottom-3 left-0 w-full h-1 bg-blue-500 rounded-full"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
@@ -109,12 +113,12 @@ export default function Services() {
               >
                 {/* Animated background gradient */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-cool-blue-50 via-transparent to-light-red-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  className="absolute inset-0 bg-gradient-to-br from-blue-50 via-transparent to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   initial={false}
                 />
                 
                 <motion.div
-                  className="w-20 h-20 bg-cool-blue-100 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-cool-blue-200 transition-all duration-500 relative z-10"
+                  className="w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-blue-200 transition-all duration-500 relative z-10"
                   whileHover={{ 
                     scale: 1.2,
                     rotate: 360,
@@ -130,13 +134,13 @@ export default function Services() {
                     delay: index * 0.2
                   }}
                 >
-                  <IconComponent className="text-cool-blue-600 text-3xl" size={28} />
+                  <IconComponent className="text-blue-600 text-3xl" size={28} />
                 </motion.div>
 
                 <motion.h3 
                   className="text-2xl font-bold text-slate-900 mb-4 relative z-10"
                   animate={{
-                    color: ["#0f172a", "#1e40af", "#0f172a"]
+                    color: ["#0f172a", "#2563eb", "#0f172a"]
                   }}
                   transition={{
                     duration: 3,
@@ -148,7 +152,7 @@ export default function Services() {
                 </motion.h3>
 
                 <motion.p 
-                  className="text-slate-600 mb-8 leading-relaxed relative z-10"
+                  className="text-slate-600 mb-4 leading-relaxed relative z-10"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
@@ -156,14 +160,19 @@ export default function Services() {
                   {service.description}
                 </motion.p>
 
+                <div className="flex justify-between items-center mb-6 relative z-10">
+                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                  <span className="text-gray-500 text-sm">{service.duration}</span>
+                </div>
+
                 <div className="flex justify-center relative z-10">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
                     <Button
-                      onClick={callBusiness}
-                      className="bg-light-red-500 hover:bg-light-red-600 text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 w-full"
+                      onClick={bookOnBooksy}
+                      className="blue-gradient hover:bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 w-full hover-blue-glow"
                       size="lg"
                     >
                       <Phone size={18} className="mr-2" />
@@ -174,7 +183,7 @@ export default function Services() {
 
                 {/* Decorative corner element */}
                 <motion.div
-                  className="absolute top-4 right-4 w-3 h-3 bg-light-red-400 rounded-full opacity-0 group-hover:opacity-100"
+                  className="absolute top-4 right-4 w-3 h-3 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100"
                   animate={{
                     scale: [1, 1.5, 1],
                   }}

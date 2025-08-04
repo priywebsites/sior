@@ -29,7 +29,7 @@ export default function Hero() {
       
       {/* Premium Geometric Elements */}
       <motion.div
-        className="absolute top-20 left-10 w-32 h-32 border border-gold-500/30 rounded-lg rotate-45"
+        className="absolute top-20 left-10 w-32 h-32 border border-blue-500/30 rounded-lg rotate-45"
         animate={{
           y: [0, -20, 0],
           rotate: [45, 75, 45],
@@ -71,7 +71,7 @@ export default function Hero() {
       />
       
       <motion.div
-        className="absolute top-16 right-1/3 w-16 h-16 bg-gold-500/20 transform rotate-45"
+        className="absolute top-16 right-1/3 w-16 h-16 bg-blue-500/20 transform rotate-45"
         animate={{
           y: [0, -25, 0],
           rotate: [45, 135, 45],
@@ -106,7 +106,7 @@ export default function Hero() {
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
           <motion.h1 
-            className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight text-shadow-premium"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-shadow-premium"
             initial={{ opacity: 0, y: 80, rotateX: -45 }}
             animate={{ opacity: 1, y: 0, rotateX: 0 }}
             transition={{ 
@@ -119,12 +119,12 @@ export default function Hero() {
           >
             SION{" "}
             <motion.span 
-              className="text-gold-400 inline-block"
+              className="text-blue-400 inline-block"
               animate={{ 
                 textShadow: [
-                  "0px 0px 20px rgba(212, 175, 55, 0.6)",
-                  "0px 0px 40px rgba(212, 175, 55, 0.9)",
-                  "0px 0px 20px rgba(212, 175, 55, 0.6)"
+                  "0px 0px 20px rgba(59, 130, 246, 0.6)",
+                  "0px 0px 40px rgba(59, 130, 246, 0.9)",
+                  "0px 0px 20px rgba(59, 130, 246, 0.6)"
                 ]
               }}
               transition={{
@@ -167,7 +167,7 @@ export default function Hero() {
             >
               <Button
                 onClick={callBusiness}
-                className="gold-gradient hover:bg-gold-600 text-black px-12 py-8 rounded-none text-xl font-bold shadow-2xl hover:shadow-gold-500/50 transition-all duration-300 relative overflow-hidden group tracking-wider"
+                className="blue-gradient hover:bg-blue-600 text-white px-12 py-8 rounded-full text-xl font-bold shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 relative overflow-hidden group tracking-wider"
                 size="lg"
               >
                 <motion.div
@@ -192,7 +192,7 @@ export default function Hero() {
             >
               <Button
                 onClick={scrollToServices}
-                className="bg-transparent border-2 border-white text-white px-12 py-8 rounded-none text-xl font-semibold hover:bg-white hover:text-black transition-all duration-300 hover:shadow-2xl tracking-wider"
+                className="bg-transparent border-2 border-white text-white px-12 py-8 rounded-full text-xl font-semibold hover:bg-white hover:text-black transition-all duration-300 hover:shadow-2xl tracking-wider"
                 size="lg"
               >
                 <Calendar className="mr-3" size={24} />
@@ -258,7 +258,7 @@ export default function Hero() {
       {[...Array(4)].map((_, i) => (
         <motion.div
           key={`light-${i}`}
-          className="absolute w-6 h-6 bg-gradient-to-r from-gold-400/15 to-gray-300/15 rounded-full blur-sm"
+          className="absolute w-6 h-6 bg-gradient-to-r from-blue-400/15 to-gray-300/15 rounded-full blur-sm"
           style={{
             left: `${20 + i * 20}%`,
             top: `${25 + (i % 2) * 50}%`,

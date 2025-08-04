@@ -25,41 +25,87 @@ export const BUSINESS_HOURS = {
   6: { open: 9, close: 21 }  // Saturday
 };
 
+export const BOOKSY_URL = "https://booksy.com/en-us/1543535_sion-barbershop_barber-shop_134766_kissimmee";
+
 export const SERVICES = [
   {
     id: 1,
-    name: "Haircuts",
-    description: "Precision cuts tailored to your face shape and personal style",
+    name: "Basic Haircut",
+    description: "Professional haircut tailored to your style",
+    price: "$30.00",
+    duration: "35min",
     icon: "Scissors"
   },
   {
     id: 2,
-    name: "Beard Trims",
-    description: "Professional beard shaping and grooming for the perfect look",
-    icon: "User"
+    name: "High/Mid Skin Fade",
+    description: "Expert skin fade with precise blending",
+    price: "$30.00",
+    duration: "45min",
+    icon: "Layers"
   },
   {
     id: 3,
-    name: "Straight Razor Shaves",
-    description: "Traditional hot towel shaves for the ultimate barbershop experience",
+    name: "Taper Fade/Blowout",
+    description: "Classic taper fade for a clean, sharp look",
+    price: "$30.00",
+    duration: "30min",
     icon: "Sparkles"
   },
   {
     id: 4,
-    name: "Fades",
-    description: "Expert fade cuts from subtle to dramatic gradients",
-    icon: "Layers"
-  },
-  {
-    id: 5,
-    name: "Line-Ups",
-    description: "Crisp, clean edge-ups for that sharp, defined look",
+    name: "Low Fade",
+    description: "Subtle low fade for a professional appearance",
+    price: "$40.00",
+    duration: "1h",
     icon: "Square"
   },
   {
+    id: 5,
+    name: "Basic Haircut & Beard",
+    description: "Complete haircut and beard styling service",
+    price: "$40.00",
+    duration: "1h",
+    icon: "User"
+  },
+  {
     id: 6,
-    name: "Kids' Cuts",
-    description: "Patient, gentle cuts for children in a friendly environment",
+    name: "Skin Fade/Taper & Beard with Blend",
+    description: "Premium fade with professional beard blending",
+    price: "$45.00",
+    duration: "1h 10min",
+    icon: "Heart"
+  },
+  {
+    id: 7,
+    name: "Beard Shaping",
+    description: "Professional beard trimming and shaping",
+    price: "$20.00",
+    duration: "20min",
+    icon: "User"
+  },
+  {
+    id: 8,
+    name: "Head Shave",
+    description: "Clean, professional head shave",
+    price: "$25.00",
+    duration: "30min",
+    icon: "Sparkles"
+  },
+  {
+    id: 9,
+    name: "Kid's Haircut",
+    description: "Gentle cuts for children (No Skin)",
+    price: "$25.00",
+    duration: "30min",
+    icon: "Heart"
+  },
+  {
+    id: 10,
+    name: "Kid's Fade",
+    description: "Professional fade cuts for kids",
+    price: "$30.00",
+    duration: "45min",
     icon: "Heart"
   }
 ];

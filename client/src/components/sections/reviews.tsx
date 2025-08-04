@@ -13,7 +13,7 @@ export default function Reviews() {
     <section id="reviews" className="py-24 bg-gray-100 relative overflow-hidden">
       {/* Sophisticated Background Elements */}
       <motion.div
-        className="absolute top-16 right-20 w-40 h-40 border border-gold-400/20 rotate-45 opacity-30"
+        className="absolute top-16 right-20 w-40 h-40 border border-blue-400/20 rotate-45 opacity-30"
         animate={{
           scale: [1, 1.3, 1],
           rotate: [45, 135, 45],
@@ -54,10 +54,10 @@ export default function Reviews() {
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.2 }}
           >
-            CLIENT <span className="text-gold-600 relative">
+            CLIENT <span className="text-blue-600 relative">
               TESTIMONIALS
               <motion.div
-                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gold-500 rounded-full"
+                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-blue-500 rounded-full"
                 initial={{ scaleX: 0, opacity: 0 }}
                 whileInView={{ scaleX: 1, opacity: 1 }}
                 viewport={{ once: true }}

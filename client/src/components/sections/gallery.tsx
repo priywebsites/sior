@@ -54,10 +54,10 @@ export default function Gallery() {
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.2 }}
           >
-            OUR <span className="text-gold-600 relative">
+            OUR <span className="text-blue-600 relative">
               PORTFOLIO
               <motion.div
-                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gold-500 rounded-full"
+                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-500 rounded-full"
                 initial={{ scaleX: 0, opacity: 0 }}
                 whileInView={{ scaleX: 1, opacity: 1 }}
                 viewport={{ once: true }}

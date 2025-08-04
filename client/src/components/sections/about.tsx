@@ -30,10 +30,10 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
-              ABOUT <span className="text-gold-500 relative">
+              ABOUT <span className="text-blue-500 relative">
                 {BUSINESS_INFO.name.toUpperCase()}
                 <motion.div
-                  className="absolute -bottom-3 left-0 w-full h-1 bg-gold-500 rounded-full"
+                  className="absolute -bottom-3 left-0 w-full h-1 bg-blue-500 rounded-full"
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
@@ -55,14 +55,14 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="w-12 h-12 bg-gold-500/20 rounded-none flex items-center justify-center">
-                  <Phone className="text-gold-400" size={20} />
+                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
+                  <Phone className="text-blue-400" size={20} />
                 </div>
                 <div>
                   <p className="font-semibold text-white tracking-wider">CALL US</p>
                   <a
                     href={`tel:${BUSINESS_INFO.phone}`}
-                    className="text-gray-300 hover:text-gold-400 transition-colors text-lg"
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-lg"
                   >
                     {BUSINESS_INFO.phone}
                   </a>
