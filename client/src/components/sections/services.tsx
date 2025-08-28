@@ -94,7 +94,7 @@ export default function Services() {
             return (
               <motion.div
                 key={service.id}
-                className="bg-gray-900 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group cursor-pointer relative overflow-hidden border border-gray-700"
+                className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group cursor-pointer relative overflow-hidden border border-gray-200"
                 initial={{ opacity: 0, y: 100, rotateY: -15 }}
                 whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
                 viewport={{ once: true }}
@@ -110,24 +110,24 @@ export default function Services() {
                   transition: { duration: 0.3 }
                 }}
               >
-                {/* Animated background gradient */}
+                {/* Logo background - always visible */}
                 <motion.div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  className="absolute inset-0 transition-opacity duration-500"
                   style={{
                     backgroundImage: `url(${SION_LOGO})`,
                     backgroundSize: '200px auto',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
-                    opacity: 0.08
+                    opacity: 0.05
                   }}
                   initial={false}
                 />
                 
 
                 <motion.h3 
-                  className="text-2xl font-bold text-white mb-4 relative z-10"
+                  className="text-2xl font-bold text-black mb-4 relative z-10"
                   animate={{
-                    color: ["#ffffff", "#d1d5db", "#ffffff"]
+                    color: ["#000000", "#374151", "#000000"]
                   }}
                   transition={{
                     duration: 3,
@@ -139,7 +139,7 @@ export default function Services() {
                 </motion.h3>
 
                 <motion.p 
-                  className="text-gray-300 mb-4 leading-relaxed relative z-10"
+                  className="text-gray-600 mb-4 leading-relaxed relative z-10"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
@@ -148,20 +148,20 @@ export default function Services() {
                 </motion.p>
 
                 <div className="flex justify-between items-center mb-6 relative z-10">
-                  <span className="text-2xl font-bold text-white">{service.price}</span>
-                  <span className="text-gray-400 text-sm">{service.duration}</span>
+                  <span className="text-2xl font-bold text-black">{service.price}</span>
+                  <span className="text-gray-500 text-sm">{service.duration}</span>
                 </div>
 
                 <div className="flex justify-center relative z-10">
                   <div className="text-center">
-                    <p className="text-white font-semibold text-lg">Walk-ins Only</p>
-                    <p className="text-gray-400 text-sm">No appointments needed</p>
+                    <p className="text-black font-semibold text-lg">Walk-ins Only</p>
+                    <p className="text-gray-500 text-sm">No appointments needed</p>
                   </div>
                 </div>
 
                 {/* Decorative corner element */}
                 <motion.div
-                  className="absolute top-4 right-4 w-3 h-3 bg-gray-500 rounded-full opacity-0 group-hover:opacity-100"
+                  className="absolute top-4 right-4 w-3 h-3 bg-gray-400 rounded-full opacity-0 group-hover:opacity-100"
                   animate={{
                     scale: [1, 1.5, 1],
                   }}
