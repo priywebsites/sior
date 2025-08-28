@@ -16,7 +16,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Image with Premium Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20"
@@ -106,7 +106,7 @@ export default function Hero() {
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
           <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-shadow-premium"
+            className="text-6xl md:text-8xl lg:text-9xl cursive-font mb-8 leading-tight text-shadow-premium text-white"
             initial={{ opacity: 0, y: 80, rotateX: -45 }}
             animate={{ opacity: 1, y: 0, rotateX: 0 }}
             transition={{ 
@@ -117,33 +117,7 @@ export default function Hero() {
               damping: 15
             }}
           >
-            SION{" "}
-            <motion.span 
-              className="text-gray-300 inline-block"
-              animate={{ 
-                textShadow: [
-                  "0px 0px 20px rgba(128, 128, 128, 0.6)",
-                  "0px 0px 40px rgba(128, 128, 128, 0.9)",
-                  "0px 0px 20px rgba(128, 128, 128, 0.6)"
-                ]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              BARBER
-            </motion.span>
-            <br />
-            <motion.span
-              className="text-gray-200"
-              initial={{ opacity: 0, x: -200 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.8 }}
-            >
-              PREMIUM GROOMING
-            </motion.span>
+            Sion Barbershop
           </motion.h1>
           
           <motion.p 

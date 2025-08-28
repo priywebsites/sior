@@ -30,8 +30,8 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
-              ABOUT <span className="text-gray-300 relative">
-                {BUSINESS_INFO.name.toUpperCase()}
+              ABOUT <span className="text-gray-300 relative cursive-font">
+                Sion Barbershop
                 <motion.div
                   className="absolute -bottom-3 left-0 w-full h-1 bg-gray-400 rounded-full"
                   initial={{ scaleX: 0 }}
@@ -42,8 +42,9 @@ export default function About() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-10 leading-relaxed font-light">
-              At {BUSINESS_INFO.name}, we redefine the art of traditional barbering with modern sophistication. 
-              Our master barbers deliver unparalleled grooming experiences in an atmosphere of luxury and precision.
+              At <span className="cursive-font text-xl">Sion Barbershop</span>, we are a Christ-centered barbershop committed to excellence and integrity in our craft. 
+              Our experienced barbers serve with dedication, treating every client with respect and care while delivering 
+              exceptional grooming services in a welcoming, faith-based environment.
             </p>
 
             <div className="space-y-6">

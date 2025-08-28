@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Scissors, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { BUSINESS_INFO } from "@/lib/constants";
+import { BUSINESS_INFO, SION_LOGO } from "@/lib/constants";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,8 +52,8 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Scissors className="text-gray-600 text-xl mr-2" />
-            <span className="text-xl font-bold text-slate-900">{BUSINESS_INFO.name}</span>
+            <img src={SION_LOGO} alt="Sion Barbershop Logo" className="w-12 h-12 mr-3" />
+            <span className="text-2xl cursive-font text-slate-900">Sion Barbershop</span>
           </motion.div>
 
           {/* Desktop Navigation */}

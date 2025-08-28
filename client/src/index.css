@@ -81,6 +81,11 @@
     font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
   }
 
+  .cursive-font {
+    font-family: 'Dancing Script', 'Brush Script MT', cursive;
+    font-weight: 600;
+  }
+
   html {
     scroll-behavior: smooth;
   }

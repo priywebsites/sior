@@ -6,6 +6,7 @@ import gallery4 from "@assets/Screen Shot 2025-07-19 at 4.58.32 PM_1752962330046
 import gallery5 from "@assets/Screen Shot 2025-07-19 at 4.59.05 PM_1752962359546.png";
 import teamPhoto from "@assets/Screen Shot 2025-07-19 at 4.55.07 PM_1752962636701.png";
 import barbershopInterior from "@assets/Screen Shot 2025-07-19 at 5.02.27 PM_1752962638160.png";
+import sionLogo from "@assets/sion-logo.png";
 
 export const BUSINESS_INFO = {
   name: "Sion Barber Shop",
@@ -173,3 +174,4 @@ export const GALLERY_IMAGES = [
 
 export const TEAM_PHOTO = teamPhoto;
 export const BARBERSHOP_INTERIOR = barbershopInterior;
+export const SION_LOGO = sionLogo;
