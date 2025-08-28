@@ -19,11 +19,11 @@ export const BUSINESS_INFO = {
 export const BUSINESS_HOURS = {
   0: null, // Sunday - Closed
   1: null, // Monday - Closed
-  2: { open: 9, close: 21 }, // Tuesday
-  3: { open: 9, close: 21 }, // Wednesday
-  4: { open: 9, close: 21 }, // Thursday
-  5: { open: 9, close: 21 }, // Friday
-  6: { open: 9, close: 21 }  // Saturday
+  2: { open: 9, close: 19 }, // Tuesday
+  3: { open: 9, close: 19 }, // Wednesday
+  4: { open: 9, close: 19 }, // Thursday
+  5: { open: 9, close: 19 }, // Friday
+  6: { open: 9, close: 19 }  // Saturday
 };
 
 export const BOOKSY_URL = "https://booksy.com/en-us/1543535_sion-barbershop_barber-shop_134766_kissimmee";
@@ -32,7 +32,7 @@ export const SERVICES = [
   {
     id: 1,
     name: "Basic Haircut",
-    description: "Professional haircut tailored to your style",
+    description: "Professional haircut tailored to your style (+$15 after hours fee)",
     price: "$20.00",
     duration: "35min",
     icon: "Scissors"
@@ -40,7 +40,7 @@ export const SERVICES = [
   {
     id: 2,
     name: "High/Mid Skin Fade",
-    description: "Expert skin fade with precise blending",
+    description: "Expert skin fade with precise blending (+$15 after hours fee)",
     price: "$20.00",
     duration: "45min",
     icon: "Layers"
@@ -48,7 +48,7 @@ export const SERVICES = [
   {
     id: 3,
     name: "Taper Fade/Blowout",
-    description: "Classic taper fade for a clean, sharp look",
+    description: "Classic taper fade for a clean, sharp look (+$15 after hours fee)",
     price: "$20.00",
     duration: "30min",
     icon: "Sparkles"
@@ -56,7 +56,7 @@ export const SERVICES = [
   {
     id: 4,
     name: "Low Fade",
-    description: "Subtle low fade for a professional appearance",
+    description: "Subtle low fade for a professional appearance (+$15 after hours fee)",
     price: "$25.00",
     duration: "1h",
     icon: "Square"
@@ -64,7 +64,7 @@ export const SERVICES = [
   {
     id: 5,
     name: "Basic Haircut & Beard",
-    description: "Complete haircut and beard styling service",
+    description: "Complete haircut and beard styling service (+$15 after hours fee)",
     price: "$30.00",
     duration: "1h",
     icon: "User"
@@ -72,7 +72,7 @@ export const SERVICES = [
   {
     id: 6,
     name: "Skin Fade/Taper & Beard with Blend",
-    description: "Premium fade with professional beard blending",
+    description: "Premium fade with professional beard blending (+$15 after hours fee)",
     price: "$30.00",
     duration: "1h 10min",
     icon: "Heart"
@@ -80,7 +80,7 @@ export const SERVICES = [
   {
     id: 7,
     name: "Beard Shaping",
-    description: "Professional beard trimming and shaping",
+    description: "Professional beard trimming and shaping (+$15 after hours fee)",
     price: "$17.00",
     duration: "20min",
     icon: "User"
@@ -88,7 +88,7 @@ export const SERVICES = [
   {
     id: 8,
     name: "Head Shave",
-    description: "Clean, professional head shave",
+    description: "Clean, professional head shave (+$15 after hours fee)",
     price: "$25.00",
     duration: "30min",
     icon: "Sparkles"
@@ -96,7 +96,7 @@ export const SERVICES = [
   {
     id: 9,
     name: "Kid's Haircut",
-    description: "Gentle cuts for children (No Skin)",
+    description: "Gentle cuts for children (No Skin) (+$15 after hours fee)",
     price: "$25.00",
     duration: "30min",
     icon: "Heart"
@@ -104,7 +104,7 @@ export const SERVICES = [
   {
     id: 10,
     name: "Kid's Fade",
-    description: "Professional fade cuts for kids",
+    description: "Professional fade cuts for kids (+$15 after hours fee)",
     price: "$20.00",
     duration: "45min",
     icon: "Heart"

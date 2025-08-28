@@ -41,11 +41,28 @@ export default function About() {
                 />
               </span>
             </h2>
-            <p className="text-xl text-gray-300 mb-10 leading-relaxed font-light">
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed font-light">
               At <span className="cursive-font text-xl">Sion Barbershop</span>, we are a Christ-centered barbershop committed to excellence and integrity in our craft. 
               Our experienced barbers serve with dedication, treating every client with respect and care while delivering 
               exceptional grooming services in a welcoming, faith-based environment.
             </p>
+            
+            <motion.div
+              className="mb-10 p-4 bg-black/20 rounded-lg border-l-4 border-gray-400"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <p className="text-sm text-gray-400 cursive-font leading-relaxed italic">
+                "Those who trust in the Lord are like Mount Zion, which cannot be shaken but endures forever. 
+                As the mountains surround Jerusalem, so the Lord surrounds his people both now and forevermore. 
+                The scepter of the wicked will not remain over the land allotted to the righteous, 
+                for then the righteous might use their hands to do evil. 
+                Lord, do good to those who are good, to those who are upright in heart."
+              </p>
+              <p className="text-xs text-gray-500 mt-2 text-right cursive-font">- Psalm 125:1-4</p>
+            </motion.div>
 
             <div className="space-y-6">
               {/* Contact Info */}
