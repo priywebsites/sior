@@ -10,10 +10,10 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-24 bg-white relative overflow-hidden">
+    <section id="gallery" className="py-24 bg-black relative overflow-hidden">
       {/* Premium Background Elements */}
       <motion.div
-        className="absolute top-20 left-10 w-48 h-48 border-2 border-gray-200/30 opacity-20"
+        className="absolute top-20 left-10 w-48 h-48 border-2 border-gray-600/30 opacity-20"
         animate={{
           scale: [1, 1.2, 1],
           x: [0, 25, 0],
@@ -27,7 +27,7 @@ export default function Gallery() {
         }}
       />
       <motion.div
-        className="absolute bottom-10 right-10 w-32 h-32 bg-gradient-to-br from-gray-100/40 to-gray-300/40 opacity-30"
+        className="absolute bottom-10 right-10 w-32 h-32 bg-gradient-to-br from-gray-700/40 to-gray-500/40 opacity-30"
         animate={{
           rotate: [0, 180, 360],
           scale: [1, 0.9, 1],
@@ -47,16 +47,16 @@ export default function Gallery() {
           transition={{ duration: 1.2, type: "spring", stiffness: 80 }}
         >
           <motion.h2 
-            className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 tracking-tight"
+            className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight"
             initial={{ opacity: 0, rotateX: -90 }}
             whileInView={{ opacity: 1, rotateX: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.2 }}
           >
-            OUR <span className="text-gray-700 relative">
+            OUR <span className="text-gray-300 relative">
               PORTFOLIO
               <motion.div
-                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gray-500 rounded-full"
+                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gray-400 rounded-full"
                 initial={{ scaleX: 0, opacity: 0 }}
                 whileInView={{ scaleX: 1, opacity: 1 }}
                 viewport={{ once: true }}
@@ -65,7 +65,7 @@ export default function Gallery() {
             </span>
           </motion.h2>
           <motion.p 
-            className="text-2xl text-slate-600 max-w-3xl mx-auto"
+            className="text-2xl text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -191,14 +191,14 @@ export default function Gallery() {
           transition={{ duration: 1, delay: 0.8 }}
         >
           <motion.div
-            className="bg-gradient-to-r from-gray-50 via-white to-gray-100 rounded-3xl p-12 shadow-xl max-w-4xl mx-auto border border-slate-100"
+            className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 rounded-3xl p-12 shadow-xl max-w-4xl mx-auto border border-gray-600"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 1 }}
           >
             <motion.h3
-              className="text-3xl font-bold text-slate-900 mb-6"
+              className="text-3xl font-bold text-white mb-6"
               animate={{
                 textShadow: [
                   "0px 0px 0px rgba(0,0,0,0)",
@@ -215,7 +215,7 @@ export default function Gallery() {
             </motion.h3>
             
             <motion.p 
-              className="text-xl text-slate-700 mb-8 max-w-2xl mx-auto leading-relaxed"
+              className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.2 }}
@@ -256,11 +256,11 @@ export default function Gallery() {
               </motion.div>
 
               <motion.p 
-                className="text-lg text-slate-600"
+                className="text-lg text-gray-300"
                 animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
               >
-                Call <span className="font-bold text-gray-700">{BUSINESS_INFO.phone}</span>
+                Call <span className="font-bold text-gray-100">{BUSINESS_INFO.phone}</span>
               </motion.p>
             </motion.div>
           </motion.div>
@@ -276,7 +276,7 @@ export default function Gallery() {
             {["5-Star Rated", "Expert Barbers", "Premium Service"].map((badge, index) => (
               <motion.div
                 key={badge}
-                className="bg-white rounded-full px-8 py-4 shadow-lg border border-gray-200"
+                className="bg-gray-800 rounded-full px-8 py-4 shadow-lg border border-gray-600"
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -286,7 +286,7 @@ export default function Gallery() {
                   boxShadow: "0 10px 25px rgba(128, 128, 128, 0.3)"
                 }}
               >
-                <span className="font-semibold text-slate-700">{badge}</span>
+                <span className="font-semibold text-white">{badge}</span>
               </motion.div>
             ))}
           </motion.div>

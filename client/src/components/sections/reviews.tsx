@@ -10,10 +10,10 @@ export default function Reviews() {
   };
 
   return (
-    <section id="reviews" className="py-24 bg-gray-100 relative overflow-hidden">
+    <section id="reviews" className="py-24 bg-black relative overflow-hidden">
       {/* Sophisticated Background Elements */}
       <motion.div
-        className="absolute top-16 right-20 w-40 h-40 border border-blue-400/20 rotate-45 opacity-30"
+        className="absolute top-16 right-20 w-40 h-40 border border-gray-400/20 rotate-45 opacity-30"
         animate={{
           scale: [1, 1.3, 1],
           rotate: [45, 135, 45],
@@ -47,16 +47,16 @@ export default function Reviews() {
           transition={{ duration: 1.2, type: "spring", stiffness: 80 }}
         >
           <motion.h2 
-            className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 tracking-tight"
+            className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight"
             initial={{ opacity: 0, rotateX: -90 }}
             whileInView={{ opacity: 1, rotateX: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.2 }}
           >
-            CLIENT <span className="text-blue-600 relative">
+            CLIENT <span className="text-gray-300 relative">
               TESTIMONIALS
               <motion.div
-                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-blue-500 rounded-full"
+                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gray-400 rounded-full"
                 initial={{ scaleX: 0, opacity: 0 }}
                 whileInView={{ scaleX: 1, opacity: 1 }}
                 viewport={{ once: true }}
@@ -65,7 +65,7 @@ export default function Reviews() {
             </span>
           </motion.h2>
           <motion.p 
-            className="text-2xl text-slate-600 max-w-3xl mx-auto"
+            className="text-2xl text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -79,7 +79,7 @@ export default function Reviews() {
           {REVIEWS.map((review, index) => (
             <motion.div
               key={review.id}
-              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group cursor-pointer relative overflow-hidden border border-slate-100"
+              className="bg-gray-900 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group cursor-pointer relative overflow-hidden border border-gray-700"
               initial={{ 
                 opacity: 0, 
                 y: 100,
@@ -143,7 +143,7 @@ export default function Reviews() {
                 </motion.div>
                 <div>
                   <motion.h4 
-                    className="font-bold text-slate-900 text-lg mb-2"
+                    className="font-bold text-white text-lg mb-2"
                     animate={{
                       color: ["#0f172a", "#1e40af", "#0f172a"]
                     }}
@@ -181,7 +181,7 @@ export default function Reviews() {
               </div>
 
               <motion.p 
-                className="text-slate-600 italic leading-relaxed mb-6 relative z-10 text-lg"
+                className="text-gray-300 italic leading-relaxed mb-6 relative z-10 text-lg"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.4 + index * 0.1 }}
@@ -247,7 +247,7 @@ export default function Reviews() {
         >
           {/* Star Rating Display */}
           <motion.div
-            className="bg-gradient-to-r from-yellow-50 via-white to-yellow-50 rounded-3xl p-8 shadow-xl max-w-2xl mx-auto border border-yellow-200"
+            className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 rounded-3xl p-8 shadow-xl max-w-2xl mx-auto border border-gray-600"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -278,7 +278,7 @@ export default function Reviews() {
             </motion.div>
             
             <motion.h3
-              className="text-3xl font-bold text-slate-900 mb-2"
+              className="text-3xl font-bold text-white mb-2"
               animate={{
                 textShadow: [
                   "0px 0px 0px rgba(0,0,0,0)",
@@ -293,7 +293,7 @@ export default function Reviews() {
             >
               5.0 Perfect Rating
             </motion.h3>
-            <p className="text-xl text-slate-600">Based on 150+ satisfied customers</p>
+            <p className="text-xl text-gray-300">Based on 150+ satisfied customers</p>
           </motion.div>
 
           {/* Call to Action */}
@@ -330,11 +330,11 @@ export default function Reviews() {
             </motion.div>
 
             <motion.p 
-              className="text-lg text-slate-600 max-w-xs"
+              className="text-lg text-gray-300 max-w-xs"
               animate={{ opacity: [0.7, 1, 0.7] }}
               transition={{ duration: 2, repeat: Infinity, delay: 1 }}
             >
-              Call <span className="font-bold text-cool-blue-600">{BUSINESS_INFO.phone}</span><br />
+              Call <span className="font-bold text-gray-100">{BUSINESS_INFO.phone}</span><br />
               <span className="text-sm">Experience the 5-star difference</span>
             </motion.p>
           </motion.div>
@@ -350,7 +350,7 @@ export default function Reviews() {
             {["Trusted by 500+", "Walk-ins Welcome", "Premium Quality"].map((badge, index) => (
               <motion.div
                 key={badge}
-                className="bg-white rounded-full px-6 py-3 shadow-lg border border-light-red-100"
+                className="bg-gray-800 rounded-full px-6 py-3 shadow-lg border border-gray-600"
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -360,7 +360,7 @@ export default function Reviews() {
                   boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)"
                 }}
               >
-                <span className="font-semibold text-slate-700">{badge}</span>
+                <span className="font-semibold text-white">{badge}</span>
               </motion.div>
             ))}
           </motion.div>
