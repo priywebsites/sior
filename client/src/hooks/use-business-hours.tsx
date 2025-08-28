@@ -56,7 +56,7 @@ export function useBusinessHours() {
       const hours = BUSINESS_HOURS[day.key as keyof typeof BUSINESS_HOURS];
       return {
         name: day.name,
-        hours: hours ? `${hours.open}:00 AM - ${hours.close === 21 ? "9:00 PM" : `${hours.close}:00 PM`}` : "Closed",
+        hours: hours ? "9:00 AM - 7:00 PM" : "Closed",
         isToday: day.key === status.currentDay,
         isClosed: !hours
       };
