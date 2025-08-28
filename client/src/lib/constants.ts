@@ -32,7 +32,7 @@ export const SERVICES = [
     id: 1,
     name: "Basic Haircut",
     description: "Professional haircut tailored to your style",
-    price: "$30.00",
+    price: "$20.00",
     duration: "35min",
     icon: "Scissors"
   },
@@ -40,7 +40,7 @@ export const SERVICES = [
     id: 2,
     name: "High/Mid Skin Fade",
     description: "Expert skin fade with precise blending",
-    price: "$30.00",
+    price: "$20.00",
     duration: "45min",
     icon: "Layers"
   },
@@ -48,7 +48,7 @@ export const SERVICES = [
     id: 3,
     name: "Taper Fade/Blowout",
     description: "Classic taper fade for a clean, sharp look",
-    price: "$30.00",
+    price: "$20.00",
     duration: "30min",
     icon: "Sparkles"
   },
@@ -56,7 +56,7 @@ export const SERVICES = [
     id: 4,
     name: "Low Fade",
     description: "Subtle low fade for a professional appearance",
-    price: "$40.00",
+    price: "$25.00",
     duration: "1h",
     icon: "Square"
   },
@@ -64,7 +64,7 @@ export const SERVICES = [
     id: 5,
     name: "Basic Haircut & Beard",
     description: "Complete haircut and beard styling service",
-    price: "$40.00",
+    price: "$30.00",
     duration: "1h",
     icon: "User"
   },
@@ -72,7 +72,7 @@ export const SERVICES = [
     id: 6,
     name: "Skin Fade/Taper & Beard with Blend",
     description: "Premium fade with professional beard blending",
-    price: "$45.00",
+    price: "$30.00",
     duration: "1h 10min",
     icon: "Heart"
   },
@@ -80,7 +80,7 @@ export const SERVICES = [
     id: 7,
     name: "Beard Shaping",
     description: "Professional beard trimming and shaping",
-    price: "$20.00",
+    price: "$17.00",
     duration: "20min",
     icon: "User"
   },
@@ -104,7 +104,7 @@ export const SERVICES = [
     id: 10,
     name: "Kid's Fade",
     description: "Professional fade cuts for kids",
-    price: "$30.00",
+    price: "$20.00",
     duration: "45min",
     icon: "Heart"
   }

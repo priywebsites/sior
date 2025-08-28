@@ -52,7 +52,7 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Scissors className="text-cool-blue-600 text-xl mr-2" />
+            <Scissors className="text-gray-600 text-xl mr-2" />
             <span className="text-xl font-bold text-slate-900">{BUSINESS_INFO.name}</span>
           </motion.div>
 
@@ -62,7 +62,7 @@ export default function Navigation() {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="font-medium text-slate-600 hover:text-cool-blue-600 transition-colors duration-300"
+                className="font-medium text-slate-600 hover:text-gray-700 transition-colors duration-300"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -79,7 +79,7 @@ export default function Navigation() {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-600 hover:text-cool-blue-600"
+              className="text-slate-600 hover:text-gray-700"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
@@ -98,7 +98,7 @@ export default function Navigation() {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left font-medium text-slate-600 hover:text-cool-blue-600 py-2"
+                className="block w-full text-left font-medium text-slate-600 hover:text-gray-700 py-2"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}

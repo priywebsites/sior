@@ -14,7 +14,7 @@ export default function Location() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Find <span className="text-cool-blue-600">Us Here</span>
+            Find <span className="text-gray-700">Us Here</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Visit us at our convenient location for the ultimate barbershop experience
@@ -50,8 +50,8 @@ export default function Location() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="w-16 h-16 bg-cool-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="text-cool-blue-600 text-xl" size={24} />
+              <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="text-gray-600 text-xl" size={24} />
               </div>
               <h3 className="font-bold text-slate-900 mb-2">Address</h3>
               <p className="text-slate-600">Visit us for directions</p>
@@ -64,13 +64,13 @@ export default function Location() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <div className="w-16 h-16 bg-cool-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="text-cool-blue-600 text-xl" size={24} />
+              <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="text-gray-600 text-xl" size={24} />
               </div>
               <h3 className="font-bold text-slate-900 mb-2">Call Ahead</h3>
               <a
                 href={`tel:${BUSINESS_INFO.phone}`}
-                className="text-slate-600 hover:text-cool-blue-600 transition-colors"
+                className="text-slate-600 hover:text-gray-700 transition-colors"
               >
                 {BUSINESS_INFO.phone}
               </a>
@@ -83,8 +83,8 @@ export default function Location() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <div className="w-16 h-16 bg-cool-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Car className="text-cool-blue-600 text-xl" size={24} />
+              <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Car className="text-gray-600 text-xl" size={24} />
               </div>
               <h3 className="font-bold text-slate-900 mb-2">Parking</h3>
               <p className="text-slate-600">Free parking available</p>

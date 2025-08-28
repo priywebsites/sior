@@ -29,7 +29,7 @@ export default function Hero() {
       
       {/* Premium Geometric Elements */}
       <motion.div
-        className="absolute top-20 left-10 w-32 h-32 border border-blue-500/30 rounded-lg rotate-45"
+        className="absolute top-20 left-10 w-32 h-32 border border-gray-500/30 rounded-lg rotate-45"
         animate={{
           y: [0, -20, 0],
           rotate: [45, 75, 45],
@@ -71,7 +71,7 @@ export default function Hero() {
       />
       
       <motion.div
-        className="absolute top-16 right-1/3 w-16 h-16 bg-blue-500/20 transform rotate-45"
+        className="absolute top-16 right-1/3 w-16 h-16 bg-gray-500/20 transform rotate-45"
         animate={{
           y: [0, -25, 0],
           rotate: [45, 135, 45],
@@ -119,12 +119,12 @@ export default function Hero() {
           >
             SION{" "}
             <motion.span 
-              className="text-blue-400 inline-block"
+              className="text-gray-300 inline-block"
               animate={{ 
                 textShadow: [
-                  "0px 0px 20px rgba(59, 130, 246, 0.6)",
-                  "0px 0px 40px rgba(59, 130, 246, 0.9)",
-                  "0px 0px 20px rgba(59, 130, 246, 0.6)"
+                  "0px 0px 20px rgba(128, 128, 128, 0.6)",
+                  "0px 0px 40px rgba(128, 128, 128, 0.9)",
+                  "0px 0px 20px rgba(128, 128, 128, 0.6)"
                 ]
               }}
               transition={{
@@ -156,47 +156,44 @@ export default function Hero() {
           </motion.p>
           
           <motion.div
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            className="flex flex-col gap-8 justify-center items-center"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
           >
             <motion.div
-              whileHover={{ scale: 1.1, y: -5 }}
-              whileTap={{ scale: 0.95 }}
+              className="bg-gray-900/80 backdrop-blur-sm border border-gray-300/20 rounded-3xl px-12 py-8 text-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 1.2 }}
             >
-              <Button
-                onClick={callBusiness}
-                className="blue-gradient hover:bg-blue-600 text-white px-12 py-8 rounded-full text-xl font-bold shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 relative overflow-hidden group tracking-wider"
-                size="lg"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">WALK-INS ONLY</h2>
+              <p className="text-gray-300 text-xl mb-6">No appointments needed - just come in!</p>
+              <motion.div
+                whileHover={{ scale: 1.05, y: -3 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  animate={{
-                    x: [-200, 200],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                />
-                <Phone className="mr-3" size={24} />
-                <span className="relative z-10">BOOK APPOINTMENT</span>
-              </Button>
+                <Button
+                  onClick={callBusiness}
+                  className="bg-gray-800 hover:bg-gray-700 text-white px-12 py-6 rounded-full text-xl font-bold shadow-2xl transition-all duration-300 tracking-wider"
+                  size="lg"
+                >
+                  <Phone className="mr-3" size={24} />
+                  <span>CALL US</span>
+                </Button>
+              </motion.div>
             </motion.div>
             
             <motion.div
-              whileHover={{ scale: 1.05, y: -3 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <Button
                 onClick={scrollToServices}
-                className="bg-transparent border-2 border-white text-white px-12 py-8 rounded-full text-xl font-semibold hover:bg-white hover:text-black transition-all duration-300 hover:shadow-2xl tracking-wider"
+                className="bg-transparent border-2 border-white text-white px-12 py-6 rounded-full text-lg font-semibold hover:bg-white hover:text-black transition-all duration-300 hover:shadow-2xl tracking-wider"
                 size="lg"
               >
-                <Calendar className="mr-3" size={24} />
-                <span className="mr-3">VIEW SERVICES</span>
+                <span className="mr-3">VIEW SERVICES & PRICES</span>
                 <motion.div
                   animate={{
                     y: [0, -8, 0],
@@ -224,7 +221,7 @@ export default function Hero() {
               animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              {BUSINESS_INFO.phone} • WALK-INS WELCOME
+              {BUSINESS_INFO.phone} • WALK-INS ONLY • NO APPOINTMENTS
             </motion.p>
           </motion.div>
         </motion.div>
@@ -258,7 +255,7 @@ export default function Hero() {
       {[...Array(4)].map((_, i) => (
         <motion.div
           key={`light-${i}`}
-          className="absolute w-6 h-6 bg-gradient-to-r from-blue-400/15 to-gray-300/15 rounded-full blur-sm"
+          className="absolute w-6 h-6 bg-gradient-to-r from-gray-400/15 to-gray-600/15 rounded-full blur-sm"
           style={{
             left: `${20 + i * 20}%`,
             top: `${25 + (i % 2) * 50}%`,

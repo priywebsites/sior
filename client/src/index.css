@@ -36,17 +36,17 @@
   --gray-800: hsl(0, 0%, 12.9%);
   --gray-900: hsl(0, 0%, 3.9%);
 
-  /* Premium neon blue accent */
-  --blue-50: hsl(204, 100%, 97%);
-  --blue-100: hsl(204, 94%, 94%);
-  --blue-200: hsl(201, 94%, 86%);
-  --blue-300: hsl(199, 95%, 74%);
-  --blue-400: hsl(198, 93%, 60%);
-  --blue-500: hsl(199, 89%, 48%);
-  --blue-600: hsl(200, 98%, 39%);
-  --blue-700: hsl(201, 96%, 32%);
-  --blue-800: hsl(201, 90%, 27%);
-  --blue-900: hsl(202, 80%, 24%);
+  /* Monochrome theme - using grays instead of blue */
+  --blue-50: hsl(0, 0%, 98%);
+  --blue-100: hsl(0, 0%, 90%);
+  --blue-200: hsl(0, 0%, 80%);
+  --blue-300: hsl(0, 0%, 70%);
+  --blue-400: hsl(0, 0%, 50%);
+  --blue-500: hsl(0, 0%, 40%);
+  --blue-600: hsl(0, 0%, 25%);
+  --blue-700: hsl(0, 0%, 20%);
+  --blue-800: hsl(0, 0%, 15%);
+  --blue-900: hsl(0, 0%, 10%);
 }
 
 .dark {
@@ -96,7 +96,7 @@
   }
 
   .blue-gradient {
-    background: linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(198, 93%, 60%) 100%);
+    background: linear-gradient(135deg, hsl(0, 0%, 25%) 0%, hsl(0, 0%, 15%) 100%);
   }
 
   .glass-effect {
@@ -382,7 +382,7 @@
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .hover-blue-glow {
@@ -390,7 +390,7 @@
 }
 
 .hover-blue-glow:hover {
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
 }
 

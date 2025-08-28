@@ -53,10 +53,10 @@ export default function Gallery() {
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.2 }}
           >
-            OUR <span className="text-blue-600 relative">
+            OUR <span className="text-gray-700 relative">
               PORTFOLIO
               <motion.div
-                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-500 rounded-full"
+                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gray-500 rounded-full"
                 initial={{ scaleX: 0, opacity: 0 }}
                 whileInView={{ scaleX: 1, opacity: 1 }}
                 viewport={{ once: true }}
@@ -118,13 +118,13 @@ export default function Gallery() {
                 
                 {/* Overlay with animation */}
                 <motion.div 
-                  className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-cool-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-gray-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   initial={false}
                 />
 
                 {/* Red accent corner */}
                 <motion.div
-                  className="absolute top-4 right-4 w-4 h-4 bg-light-red-500 rounded-full opacity-0 group-hover:opacity-100"
+                  className="absolute top-4 right-4 w-4 h-4 bg-gray-500 rounded-full opacity-0 group-hover:opacity-100"
                   animate={{
                     scale: [1, 1.3, 1],
                   }}
@@ -142,18 +142,18 @@ export default function Gallery() {
                   whileHover={{ scale: 1.1 }}
                 >
                   <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-2xl">
-                    <Eye className="text-cool-blue-600" size={28} />
+                    <Eye className="text-gray-600" size={28} />
                   </div>
                 </motion.div>
 
                 {/* Animated border */}
                 <motion.div
-                  className="absolute inset-0 border-4 border-light-red-400/50 rounded-3xl opacity-0 group-hover:opacity-100"
+                  className="absolute inset-0 border-4 border-gray-400/50 rounded-3xl opacity-0 group-hover:opacity-100"
                   animate={{
                     borderColor: [
-                      "rgba(248, 113, 113, 0.5)",
-                      "rgba(59, 130, 246, 0.5)",
-                      "rgba(248, 113, 113, 0.5)"
+                      "rgba(128, 128, 128, 0.5)",
+                      "rgba(64, 64, 64, 0.5)",
+                      "rgba(128, 128, 128, 0.5)"
                     ]
                   }}
                   transition={{
@@ -166,7 +166,7 @@ export default function Gallery() {
 
               {/* Floating animation for each card */}
               <motion.div
-                className="absolute -z-10 inset-0 bg-light-red-100 rounded-3xl"
+                className="absolute -z-10 inset-0 bg-gray-100 rounded-3xl"
                 animate={{
                   y: [0, -3, 0],
                   rotate: [0, 0.5, -0.5, 0],
@@ -191,7 +191,7 @@ export default function Gallery() {
           transition={{ duration: 1, delay: 0.8 }}
         >
           <motion.div
-            className="bg-gradient-to-r from-cool-blue-50 via-white to-light-red-50 rounded-3xl p-12 shadow-xl max-w-4xl mx-auto border border-slate-100"
+            className="bg-gradient-to-r from-gray-50 via-white to-gray-100 rounded-3xl p-12 shadow-xl max-w-4xl mx-auto border border-slate-100"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -202,7 +202,7 @@ export default function Gallery() {
               animate={{
                 textShadow: [
                   "0px 0px 0px rgba(0,0,0,0)",
-                  "0px 2px 10px rgba(59, 130, 246, 0.3)",
+                  "0px 2px 10px rgba(128, 128, 128, 0.3)",
                   "0px 0px 0px rgba(0,0,0,0)"
                 ]
               }}
@@ -236,7 +236,7 @@ export default function Gallery() {
               >
                 <Button
                   onClick={callBusiness}
-                  className="bg-light-red-500 hover:bg-light-red-600 text-white px-12 py-6 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
+                  className="bg-gray-800 hover:bg-gray-700 text-white px-12 py-6 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
                   size="lg"
                 >
                   <motion.div
@@ -251,7 +251,7 @@ export default function Gallery() {
                     }}
                   />
                   <Phone className="mr-3" size={24} />
-                  <span className="relative z-10">Book Your Appointment</span>
+                  <span className="relative z-10">Call for Walk-in</span>
                 </Button>
               </motion.div>
 
@@ -260,7 +260,7 @@ export default function Gallery() {
                 animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
               >
-                Call <span className="font-bold text-cool-blue-600">{BUSINESS_INFO.phone}</span>
+                Call <span className="font-bold text-gray-700">{BUSINESS_INFO.phone}</span>
               </motion.p>
             </motion.div>
           </motion.div>
@@ -276,14 +276,14 @@ export default function Gallery() {
             {["5-Star Rated", "Expert Barbers", "Premium Service"].map((badge, index) => (
               <motion.div
                 key={badge}
-                className="bg-white rounded-full px-8 py-4 shadow-lg border border-light-red-100"
+                className="bg-white rounded-full px-8 py-4 shadow-lg border border-gray-200"
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 1.8 + index * 0.1 }}
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 10px 25px rgba(248, 113, 113, 0.3)"
+                  boxShadow: "0 10px 25px rgba(128, 128, 128, 0.3)"
                 }}
               >
                 <span className="font-semibold text-slate-700">{badge}</span>

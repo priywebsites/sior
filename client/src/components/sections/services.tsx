@@ -26,7 +26,7 @@ export default function Services() {
     <section id="services" className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Premium Background Elements */}
       <motion.div
-        className="absolute top-10 right-10 w-40 h-40 border border-blue-300/20 rotate-45 opacity-30"
+        className="absolute top-10 right-10 w-40 h-40 border border-gray-300/20 rotate-45 opacity-30"
         animate={{
           scale: [1, 1.1, 1],
           rotate: [45, 135, 45],
@@ -65,10 +65,10 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 1.2, delay: 0.2 }}
           >
-            PREMIUM <span className="text-blue-600 relative">
+            PREMIUM <span className="text-gray-700 relative">
               SERVICES
               <motion.div
-                className="absolute -bottom-3 left-0 w-full h-1 bg-blue-500 rounded-full"
+                className="absolute -bottom-3 left-0 w-full h-1 bg-gray-500 rounded-full"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
@@ -117,7 +117,7 @@ export default function Services() {
                 />
                 
                 <motion.div
-                  className="w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-blue-200 transition-all duration-500 relative z-10"
+                  className="w-20 h-20 bg-gray-100 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-gray-200 transition-all duration-500 relative z-10"
                   whileHover={{ 
                     scale: 1.2,
                     rotate: 360,
@@ -133,13 +133,13 @@ export default function Services() {
                     delay: index * 0.2
                   }}
                 >
-                  <IconComponent className="text-blue-600 text-3xl" size={28} />
+                  <IconComponent className="text-gray-600 text-3xl" size={28} />
                 </motion.div>
 
                 <motion.h3 
                   className="text-2xl font-bold text-slate-900 mb-4 relative z-10"
                   animate={{
-                    color: ["#0f172a", "#2563eb", "#0f172a"]
+                    color: ["#0f172a", "#4b5563", "#0f172a"]
                   }}
                   transition={{
                     duration: 3,
@@ -160,29 +160,20 @@ export default function Services() {
                 </motion.p>
 
                 <div className="flex justify-between items-center mb-6 relative z-10">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                  <span className="text-2xl font-bold text-gray-700">{service.price}</span>
                   <span className="text-gray-500 text-sm">{service.duration}</span>
                 </div>
 
                 <div className="flex justify-center relative z-10">
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <Button
-                      onClick={bookOnBooksy}
-                      className="blue-gradient hover:bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 w-full hover-blue-glow"
-                      size="lg"
-                    >
-                      <Calendar size={18} className="mr-2" />
-                      Book Now
-                    </Button>
-                  </motion.div>
+                  <div className="text-center">
+                    <p className="text-gray-600 font-semibold text-lg">Walk-ins Only</p>
+                    <p className="text-gray-500 text-sm">No appointments needed</p>
+                  </div>
                 </div>
 
                 {/* Decorative corner element */}
                 <motion.div
-                  className="absolute top-4 right-4 w-3 h-3 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100"
+                  className="absolute top-4 right-4 w-3 h-3 bg-gray-400 rounded-full opacity-0 group-hover:opacity-100"
                   animate={{
                     scale: [1, 1.5, 1],
                   }}
@@ -205,61 +196,24 @@ export default function Services() {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <motion.div
-              whileHover={{ scale: 1.05, y: -3 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button
-                onClick={bookOnBooksy}
-                className="blue-gradient hover:bg-blue-600 text-white px-10 py-6 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
-                size="lg"
-              >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  animate={{
-                    x: [-200, 200],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                />
-                <Calendar className="mr-3" size={24} />
-                <span className="relative z-10">Book Any Service Now</span>
-              </Button>
-            </motion.div>
-
+          <div className="flex justify-center">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <Button
-                onClick={bookOnBooksy}
-                className="bg-gray-800 hover:bg-gray-900 text-white px-10 py-6 rounded-full text-xl font-semibold transition-all duration-300 hover:shadow-xl relative overflow-hidden"
+                onClick={callBusiness}
+                className="bg-gray-800 hover:bg-gray-700 text-white px-12 py-8 rounded-full text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300"
                 size="lg"
               >
-                <Calendar className="mr-3" size={24} />
-                <span>Every Cut is a Work of Art</span>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
-                  animate={{
-                    x: [-150, 150],
-                  }}
-                  transition={{
-                    duration: 2.5,
-                    repeat: Infinity,
-                    ease: "linear",
-                    delay: 1
-                  }}
-                />
+                <Phone className="mr-3" size={24} />
+                <span>Call for Walk-in Availability</span>
               </Button>
             </motion.div>
           </div>
 
           <motion.div
-            className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto border border-blue-100"
+            className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto border border-gray-200"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -270,9 +224,9 @@ export default function Services() {
               animate={{ opacity: [0.8, 1, 0.8] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <span className="font-bold text-blue-600">Walk-ins Welcome!</span> 
+              <span className="font-bold text-gray-800">Walk-ins Only!</span> 
               <br />
-              Call <span className="font-bold text-blue-600">{BUSINESS_INFO.phone}</span> to book or just drop by
+              Call <span className="font-bold text-gray-800">{BUSINESS_INFO.phone}</span> or just drop by - no appointments needed
             </motion.p>
           </motion.div>
         </motion.div>

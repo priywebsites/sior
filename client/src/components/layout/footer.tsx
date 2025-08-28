@@ -30,7 +30,7 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center mb-6">
-              <Scissors className="text-cool-blue-400 text-2xl mr-3" />
+              <Scissors className="text-gray-400 text-2xl mr-3" />
               <span className="text-2xl font-bold">{BUSINESS_INFO.name}</span>
             </div>
             <p className="text-slate-300 mb-6 leading-relaxed">
@@ -41,7 +41,7 @@ export default function Footer() {
                 href={BUSINESS_INFO.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-cool-blue-600 rounded-full flex items-center justify-center hover:bg-cool-blue-700 transition-colors"
+                className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -49,7 +49,7 @@ export default function Footer() {
               </motion.a>
               <motion.a
                 href={`tel:${BUSINESS_INFO.phone}`}
-                className="w-12 h-12 bg-cool-blue-600 rounded-full flex items-center justify-center hover:bg-cool-blue-700 transition-colors"
+                className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -71,7 +71,7 @@ export default function Footer() {
                 <li key={link.id}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="text-slate-300 hover:text-cool-blue-400 transition-colors duration-300"
+                    className="text-slate-300 hover:text-gray-300 transition-colors duration-300"
                   >
                     {link.name}
                   </button>
@@ -90,15 +90,15 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-6">Contact Info</h3>
             <div className="space-y-4">
               <div className="flex items-center">
-                <Phone className="text-cool-blue-400 mr-3" size={20} />
+                <Phone className="text-gray-400 mr-3" size={20} />
                 <span className="text-slate-300">{BUSINESS_INFO.phone}</span>
               </div>
               <div className="flex items-center">
-                <Clock className="text-cool-blue-400 mr-3" size={20} />
+                <Clock className="text-gray-400 mr-3" size={20} />
                 <span className="text-slate-300">Tue-Fri, Sat: 9 AM - 9 PM</span>
               </div>
               <div className="flex items-center">
-                <MapPin className="text-cool-blue-400 mr-3" size={20} />
+                <MapPin className="text-gray-400 mr-3" size={20} />
                 <span className="text-slate-300">See map above for location</span>
               </div>
             </div>

@@ -30,10 +30,10 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
-              ABOUT <span className="text-blue-500 relative">
+              ABOUT <span className="text-gray-300 relative">
                 {BUSINESS_INFO.name.toUpperCase()}
                 <motion.div
-                  className="absolute -bottom-3 left-0 w-full h-1 bg-blue-500 rounded-full"
+                  className="absolute -bottom-3 left-0 w-full h-1 bg-gray-400 rounded-full"
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
@@ -55,14 +55,14 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
-                  <Phone className="text-blue-400" size={20} />
+                <div className="w-12 h-12 bg-gray-500/20 rounded-full flex items-center justify-center">
+                  <Phone className="text-gray-400" size={20} />
                 </div>
                 <div>
                   <p className="font-semibold text-white tracking-wider">CALL US</p>
                   <a
                     href={`tel:${BUSINESS_INFO.phone}`}
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-lg"
+                    className="text-gray-300 hover:text-gray-200 transition-colors text-lg"
                   >
                     {BUSINESS_INFO.phone}
                   </a>
@@ -76,16 +76,16 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <div className="w-12 h-12 bg-cool-blue-100 rounded-full flex items-center justify-center">
-                  <Facebook className="text-cool-blue-600" size={20} />
+                <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
+                  <Facebook className="text-gray-600" size={20} />
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">Follow Us</p>
+                  <p className="font-semibold text-white">Follow Us</p>
                   <a
                     href={BUSINESS_INFO.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-cool-blue-600 hover:text-cool-blue-700 transition-colors"
+                    className="text-gray-300 hover:text-gray-200 transition-colors"
                   >
                     @sionbabershop
                   </a>
@@ -94,7 +94,7 @@ export default function About() {
 
               {/* Hours Display */}
               <motion.div
-                className="bg-gradient-to-br from-slate-50 via-cool-blue-25 to-light-red-25 rounded-3xl p-8 mt-8 shadow-lg border border-slate-200"
+                className="bg-gradient-to-br from-gray-100 via-gray-50 to-white rounded-3xl p-8 mt-8 shadow-lg border border-gray-300"
                 initial={{ opacity: 0, y: 50, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
@@ -105,7 +105,7 @@ export default function About() {
                   animate={{
                     textShadow: [
                       "0px 0px 0px rgba(0,0,0,0)",
-                      "0px 2px 8px rgba(59, 130, 246, 0.2)",
+                      "0px 2px 8px rgba(128, 128, 128, 0.2)",
                       "0px 0px 0px rgba(0,0,0,0)"
                     ]
                   }}
@@ -115,7 +115,7 @@ export default function About() {
                     animate={{ rotate: [0, 360] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                   >
-                    <Clock className="text-cool-blue-600" size={24} />
+                    <Clock className="text-gray-600" size={24} />
                   </motion.div>
                   Hours of Operation
                 </motion.h3>
@@ -126,7 +126,7 @@ export default function About() {
                       key={day.name}
                       className={`flex justify-between items-center py-3 px-4 rounded-xl transition-all duration-300 ${
                         day.isToday 
-                          ? "bg-gradient-to-r from-cool-blue-50 to-light-red-50 border-l-4 border-cool-blue-500 shadow-md scale-105" 
+                          ? "bg-gradient-to-r from-gray-100 to-gray-50 border-l-4 border-gray-500 shadow-md scale-105" 
                           : "bg-white/50 hover:bg-white/80"
                       }`}
                       initial={{ opacity: 0, x: -30, rotateY: -15 }}
@@ -139,15 +139,15 @@ export default function About() {
                         transition: { duration: 0.2 }
                       }}
                     >
-                      <span className={`font-semibold ${day.isToday ? "text-cool-blue-700" : "text-slate-700"}`}>
+                      <span className={`font-semibold ${day.isToday ? "text-gray-700" : "text-slate-700"}`}>
                         {day.name}
                       </span>
                       <motion.span 
                         className={`font-medium ${
                           day.isClosed 
-                            ? "text-light-red-600" 
+                            ? "text-red-600" 
                             : day.isToday 
-                              ? "text-cool-blue-600" 
+                              ? "text-gray-600" 
                               : "text-slate-600"
                         }`}
                         animate={day.isToday ? {
