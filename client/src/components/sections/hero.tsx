@@ -137,7 +137,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 1 }}
           >
             <motion.div
-              className="bg-black/30 backdrop-blur-sm border border-gray-300/20 rounded-3xl px-12 py-8 text-center"
+              className="bg-black/15 backdrop-blur-sm border border-gray-300/20 rounded-3xl px-12 py-8 text-center"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
