@@ -55,13 +55,13 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <p className="text-sm text-gray-400 cursive-font leading-relaxed italic">
-                "Those who trust in the Lord are like Mount Zion, which cannot be shaken but endures forever. 
-                As the mountains surround Jerusalem, so the Lord surrounds his people both now and forevermore. 
-                The scepter of the wicked will not remain over the land allotted to the righteous, 
-                for then the righteous might use their hands to do evil. 
-                Lord, do good to those who are good, to those who are upright in heart."
+                "Los que confían en Jehová son como el monte de Sion, que no se mueve, sino que permanece para siempre.
+                Como Jerusalén tiene montes alrededor de ella, así Jehová está alrededor de su pueblo desde ahora y para siempre.
+                Porque no reposará la vara de la impiedad sobre la heredad de los justos;
+                no sea que extiendan los justos sus manos a la iniquidad.
+                Haz bien, oh Jehová, a los buenos, y a los que son rectos en su corazón."
               </p>
-              <p className="text-xs text-gray-500 mt-2 text-right cursive-font">- Psalm 125:1-4</p>
+              <p className="text-xs text-gray-500 mt-2 text-right cursive-font">- Salmos 125:1-4</p>
             </motion.div>
 
             <div className="space-y-6">
