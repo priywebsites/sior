@@ -118,7 +118,7 @@ export default function Services() {
                     backgroundSize: '200px auto',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
-                    opacity: 0.05
+                    opacity: 0.08
                   }}
                   initial={false}
                 />
