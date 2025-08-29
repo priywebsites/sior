@@ -23,7 +23,14 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-24 bg-black relative overflow-hidden">
+    <section id="services" className="py-24 relative overflow-hidden" style={{
+      backgroundImage: 'url(/attached_assets/IMG_1374_1756434364910.jpeg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
+      {/* Background overlay for text readability */}
+      <div className="absolute inset-0 bg-black/60"></div>
       {/* Premium Background Elements */}
       <motion.div
         className="absolute top-10 right-10 w-40 h-40 border border-gray-600/20 rotate-45 opacity-30"
@@ -110,20 +117,18 @@ export default function Services() {
                   transition: { duration: 0.3 }
                 }}
               >
-                {/* New background image - always visible */}
+                {/* Logo background - always visible */}
                 <motion.div
-                  className="absolute inset-0 transition-opacity duration-500 rounded-3xl"
+                  className="absolute inset-0 transition-opacity duration-500"
                   style={{
-                    backgroundImage: 'url(/attached_assets/IMG_1374_1756434364910.jpeg)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
+                    backgroundImage: `url(${SION_LOGO})`,
+                    backgroundSize: '200px auto',
                     backgroundRepeat: 'no-repeat',
-                    opacity: 0.15
+                    backgroundPosition: 'center',
+                    opacity: 0.05
                   }}
                   initial={false}
                 />
-                {/* Overlay for text readability */}
-                <div className="absolute inset-0 bg-white/85 rounded-3xl"></div>
                 
 
                 <motion.h3 
